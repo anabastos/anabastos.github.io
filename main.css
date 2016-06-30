@@ -3,6 +3,10 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+.fa {
+    color: #646363;
+}
+
 h2 { 
   color: #504d4d;
 }
@@ -10,9 +14,8 @@ h2 {
 .page-description {
   color: #646363;
   background-color: white;
-  margin: 370px;
-  text-align: center;
-  padding: 100px;
+  margin: 18%;
+  padding: 5%;
   border-radius: 5px;
   margin-top: 150px;
 }
@@ -21,17 +24,7 @@ h2 {
   border-radius: 50%;
   box-shadow: 2px 4px 10px #000;
   display: block;
-  position: absolute;
-  left: 44.3%;
-  margin-top: -110px;
-}
-
-nav li {
-  display: inline;
-  margin: 0;
-  padding: 0 10px;
-}
-
-nav ul {
-  display: inline;
+  margin-top: -210px;
+  margin-left: auto;
+  margin-right: auto
 }

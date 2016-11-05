@@ -1,6 +1,6 @@
 body {
-  background-image: url("http://36.media.tumblr.com/b7b3cf31fdc336779e0a01cd5be59c2c/tumblr_npx0mbDqQr1utlqpzo1_500.jpg");
   font-family: 'Lato', sans-serif;
+  background: linear-gradient( 69deg, #B7B7DE, #D9CCCC, #DCCBD5 ); 
 }
 
 .fa {

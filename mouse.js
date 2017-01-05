@@ -1,4 +1,4 @@
-colour="#FFFFFF";
+colour="#6b6f6e";
 var sparkles=120;
 
 /****************************

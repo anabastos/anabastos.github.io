@@ -1,6 +1,15 @@
+
+@font-face {
+    font-family: pixelArt;
+    src: url(DisposableDroidBB.ttf);
+}
+
+@roxo: #b669ff;
+@rosa: #eb57ff;
+
 body {
-  font-family: 'Lato', sans-serif;
-  background: linear-gradient( 69deg, #B7B7DE, #D9CCCC, #DCCBD5 ); 
+  font-family: pixelArt;
+  background-image: url("stars.gif");
 }
 
 .fa {
@@ -12,6 +21,7 @@ h2 {
 }
 
 .page-description {
+  border-style: dashed;
   color: #646363;
   background-color: white;
   margin: 18%;
@@ -22,7 +32,8 @@ h2 {
 
 .fotis {
   border-radius: 50%;
-  box-shadow: 2px 4px 10px #000;
+  border-width: 2.7px;
+  border-style: dashed;
   display: block;
   margin-top: -210px;
   margin-left: auto;

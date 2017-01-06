@@ -1,11 +1,7 @@
-
 @font-face {
     font-family: pixelArt;
     src: url(DisposableDroidBB.ttf);
 }
-
-@roxo: #b669ff;
-@rosa: #eb57ff;
 
 body {
   font-family: pixelArt;
@@ -17,17 +13,20 @@ body {
 }
 
 h2 { 
-  color: #504d4d;
+  color: #504d4d; 
 }
 
-.page-description {
+.container-fluid {
   border-style: dashed;
   color: #646363;
   background-color: white;
-  margin: 18%;
   padding: 5%;
   border-radius: 5px;
-  margin-top: 150px;
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 60%;
 }
 
 .fotis {
@@ -35,11 +34,28 @@ h2 {
   border-width: 2.7px;
   border-style: dashed;
   display: block;
-  margin-top: -210px;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  margin-top: -20%;
+  width: 30%;
+  height: 30%;
 }
 
-.wakatime {
-  width: 80%; 
+@media screen 
+  and (max-device-width: 840px) {
+    h3 {
+      font-size: 50px;
+    }
+
+    h4 {
+      font-size: 45px;
+    }
+    h2 {
+      font-size: 60px;
+    }
+    .container-fluid {
+      margin-top: 20%;
+      width: 95%;
+      font-size: 40px;
+    }
 }

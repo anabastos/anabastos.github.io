@@ -1,3 +1,3 @@
-# Meu github pages
+# My github pages
 
-## :star: [anabastos.github.io](http://anabastos.github.io) :star:
+#### :star: [anabastos.me](https://anabastos.me) :star:

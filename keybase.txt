@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/anabastos
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://anabastos.me
+  * I am anabastos (https://keybase.io/anabastos) on keybase.
+  * I have a public key ASAnuTso98wlctKF4aUfNjI1GB5-LaX4Att-L-T5cbH1KAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012027b93b28f7cc2572d285e1a51f363235181e7e2da5f802db7e2fe4f971b1f5280a",
+      "host": "keybase.io",
+      "kid": "012027b93b28f7cc2572d285e1a51f363235181e7e2da5f802db7e2fe4f971b1f5280a",
+      "uid": "dfb666cc513dffde6c086bb93ee53b19",
+      "username": "anabastos"
+    },
+    "merkle_root": {
+      "ctime": 1515516484,
+      "hash": "deeb5ebf5a1247e8e4c202964958d1f7eb60b2614a1092c99e63fb2a30bf6158219c05ae087d108fbe0fa337ebe825495f13e065fafad8c33708fbef897720da",
+      "hash_meta": "de9122b8b2a8a493de85bd21762237c3ce65ce2e009a88cb9f590ee11eeaddcb",
+      "seqno": 1906537
+    },
+    "service": {
+      "hostname": "anabastos.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.38"
+  },
+  "ctime": 1515516519,
+  "expire_in": 504576000,
+  "prev": "74a4b8f8ae5f7827aa384e58538f84a6c8b1e9f3d4100b344f67f20a8a239c0f",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgJ7k7KPfMJXLSheGlHzYyNRgefi2l+ALbfi/k+XGx9SgKp3BheWxvYWTFA0V7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMjdiOTNiMjhmN2NjMjU3MmQyODVlMWE1MWYzNjMyMzUxODFlN2UyZGE1ZjgwMmRiN2UyZmU0Zjk3MWIxZjUyODBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMjdiOTNiMjhmN2NjMjU3MmQyODVlMWE1MWYzNjMyMzUxODFlN2UyZGE1ZjgwMmRiN2UyZmU0Zjk3MWIxZjUyODBhIiwidWlkIjoiZGZiNjY2Y2M1MTNkZmZkZTZjMDg2YmI5M2VlNTNiMTkiLCJ1c2VybmFtZSI6ImFuYWJhc3RvcyJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxNTUxNjQ4NCwiaGFzaCI6ImRlZWI1ZWJmNWExMjQ3ZThlNGMyMDI5NjQ5NThkMWY3ZWI2MGIyNjE0YTEwOTJjOTllNjNmYjJhMzBiZjYxNTgyMTljMDVhZTA4N2QxMDhmYmUwZmEzMzdlYmU4MjU0OTVmMTNlMDY1ZmFmYWQ4YzMzNzA4ZmJlZjg5NzcyMGRhIiwiaGFzaF9tZXRhIjoiZGU5MTIyYjhiMmE4YTQ5M2RlODViZDIxNzYyMjM3YzNjZTY1Y2UyZTAwOWE4OGNiOWY1OTBlZTExZWVhZGRjYiIsInNlcW5vIjoxOTA2NTM3fSwic2VydmljZSI6eyJob3N0bmFtZSI6ImFuYWJhc3Rvcy5tZSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjM4In0sImN0aW1lIjoxNTE1NTE2NTE5LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6Ijc0YTRiOGY4YWU1Zjc4MjdhYTM4NGU1ODUzOGY4NGE2YzhiMWU5ZjNkNDEwMGIzNDRmNjdmMjBhOGEyMzljMGYiLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxECj6+1hgyXld64o+YJJHUhCMdedF/L2CLwKzMRuIVIrHzzcBGyNBB6SpmXAW+Z6hPF7FEww+rpHAMMIgUogzucGqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQg9no3ikKZUiH+7QcMf0gJ2wA/zOjLtXTWWya39hOYPh2jdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/anabastos
+
+==================================================================

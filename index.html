@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" type="image/ico" href="favicon.ico">
-  <title>*~ Ana Bastos `(-W-)`~*</title>
   <meta charset="utf-8"/>
+  <title>*~ Ana Bastos `(-W-)`~*</title>
+
   <link rel="canonical" href="https://anabastos.me" />
-  <link href='//fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/ico" href="favicon.ico">
+
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="main.css">
+
   <script type="text/javascript" src="mouse.js"></script>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -19,10 +22,9 @@
   <!-- End Google Tag Manager -->
 </head>
 <body>
-
   <div class="container-fluid text-center">
     <img class="fotis" src="https://preview.ibb.co/cxuzca/Captura_de_Tela_2017_06_04_a_s_00_05_20.png" height="200" width="200">
-    <h2>ANA LUIZA BASTOS</h2>
+    <h2>ANA LUIZA PORTELLO BASTOS</h2>
     <h3>Web Developer &#9749 🛠</h3>
     <h4>Sao Paulo, Brasil</h4>
     <p>Level: <span id="age"></span> &#10024<br> MBTI: INTP-T &#9816<br> Astral: Gemini / Scorpio / Capricorn <br></p>
@@ -69,16 +71,17 @@
     </nav>
     </div>
     <script>
+        // Dynamic Age
         const today = new Date();
         const birthday = new Date("1995/06/13");
         const year = today.getFullYear();
         const myAge = Math.floor(Math.abs(today - birthday) / 1000 / 60 / 60 / 24 / 365);
         document.getElementById("age").innerHTML = myAge;
 
-        // https stuff
+        // Redirect to https
         if (("anabastos.me" == window.location.host) && (window.location.protocol != "https:")) window.location.protocol = "https";
         
-        // analytics stuff
+        // Analytics stuff
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

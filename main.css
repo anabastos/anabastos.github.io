@@ -5,10 +5,16 @@
 
 body {
   font-family: pixelArt;
+  background-color: black;
+  background-size: 650px;
   background-image: url("stars.gif");
 }
 
-.fa {
+.p {
+  font-size: 16px;
+}
+
+.fab {
     color: #646363;
 }
 

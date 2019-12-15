@@ -1,13 +1,13 @@
 @font-face {
     font-family: pixelArt;
-    src: url(DisposableDroidBB.ttf);
+    src: url("assets/DisposableDroidBB.ttf");
 }
 
 body {
   font-family: pixelArt;
   background-color: black;
-  background-size: 650px;
-  background-image: url("stars.gif");
+  background-size: 720px;
+  background-image: url("assets/stars.gif");
 }
 
 .p {

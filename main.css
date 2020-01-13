@@ -18,6 +18,11 @@ body {
     color: #646363;
 }
 
+.text-special {
+  font-size: 20px;
+  font-style: italic;
+}
+
 h2 {
   color: #504d4d;
 }
@@ -57,7 +62,16 @@ h2 {
     h2 {
       font-size: 60px;
     }
+    h1 {
+      font-size: 70px;
+    }
+    .fotis {
+      border-width: 8px;
+      width: 350px;
+      height: 350px;
+    }
     .container-fluid {
+      border-width: 8px;
       margin-top: 20%;
       width: 95%;
       font-size: 40px;

@@ -14,13 +14,13 @@ body {
   font-size: 16px;
 }
 
-.fab {
-    color: #646363;
+.text-special {
+  font-size: 25px;
+  font-style: italic;
 }
 
-.text-special {
-  font-size: 20px;
-  font-style: italic;
+.fab {
+    color: #646363;
 }
 
 h2 {
@@ -40,7 +40,7 @@ h2 {
   width: 60%;
 }
 
-.fotis {
+.avatar {
   border-radius: 50%;
   border-width: 2.7px;
   border-style: dashed;
@@ -56,6 +56,11 @@ h2 {
       font-size: 50px;
     }
 
+    .text-special {
+      font-size: 60px;
+      font-style: italic;
+    }
+
     h4 {
       font-size: 45px;
     }
@@ -65,7 +70,7 @@ h2 {
     h1 {
       font-size: 70px;
     }
-    .fotis {
+    .avatar {
       border-width: 8px;
       width: 350px;
       height: 350px;

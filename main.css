@@ -12,7 +12,68 @@ body {
 
 .icon-box {
   margin-top: 3%;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.5rem;
 }
+
+/* Links */
+.icon-box a {
+  color: #0d0e47;
+  transition: color 0.3s ease;
+}
+
+.icon-box a:hover {
+  color: #f39c12;
+}
+
+/* Linha de ícones */
+.icons-row {
+  margin-top: 20px;
+}
+
+/* Ícones */
+.icon-box i:hover {
+  color: #1d1b19;
+  transform: scale(1.2);
+}
+
+.icon-box i {
+  transition: transform 0.3s, color 0.3s;
+  font-size: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .icon-box i {
+    font-size: 2.5em;
+  }
+}
+
+/* Controle da grid para 4 por linha no Bootstrap */
+
+/* Para xs (telas muito pequenas) 2 por linha */
+.col-xs-6 {
+    width: 50%;
+    float: left;
+}
+
+/* Para sm e md (telas pequenas e médias) 4 por linha */
+@media (min-width: 576px) {
+    .col-sm-3 {
+        width: 25%;
+        float: left;
+    }
+}
+
+/* Para telas grandes mantém 4 por linha */
+@media (min-width: 992px) {
+    .col-lg-3 {
+        width: 25%;
+        float: left;
+    }
+}
+
+/* Ajustes adicionais */
 
 .p {
   font-size: 16px;
@@ -35,13 +96,14 @@ h2 {
   border-style: dashed;
   color: #646363;
   background-color: white;
-  padding: 5%;
+  padding: 1.5%;
   border-radius: 5px;
   margin-top: 6%;
+  margin-bottom: -6%;
   display: flex;
   flex-direction: column;
   align-content: center;
-  width: 60%;
+  width: 40%;
 }
 
 .avatar {
@@ -54,35 +116,31 @@ h2 {
   margin-top: -20%;
 }
 
-@media screen
-  and (max-device-width: 840px) {
-    h3 {
-      font-size: 50px;
-    }
-
+@media screen and (max-device-width: 840px) {
     .text-special {
-      font-size: 60px;
+      font-size: 32px;
       font-style: italic;
     }
 
     h4 {
-      font-size: 45px;
+      font-size: 30px;
     }
     h2 {
-      font-size: 60px;
+      font-size: 35px;
     }
     h1 {
-      font-size: 70px;
+      font-size: 40px;
     }
     .avatar {
       border-width: 8px;
-      width: 350px;
-      height: 350px;
+      width: 250px;
+      height: 250px;
     }
     .container-fluid {
       border-width: 8px;
-      margin-top: 20%;
-      width: 95%;
-      font-size: 40px;
+      margin-top: 10%;
+      margin-bottom: -5%;
+      width: 70%;
+      font-size: 25px;
     }
 }

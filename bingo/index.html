@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bingo!</title>
+</head>
+
+<body>
+    <button onclick="sortear()">Sortear</button>
+    <pre id="output"></pre>
+    <script>
+        const frasesBingo = {
+            1: "Começo de tudo",
+            2: "Patinho na lagoa",
+            3: "Três mosqueteiros",
+            4: "Quatro estações",
+            5: "Cinco dedos na mão",
+            6: "Meia dúzia",
+            7: "Numero da sorte",
+            8: "Oito tentáculos do polvo",
+            9: "Nove meses de gestação",
+            10: "Nota máxima!",
+            11: "Dois palitinhos. Onze!",
+            12: "Uma dúzia",
+            13: "Dia do azar",
+            14: "Idade do namoro",
+            15: "Quinze anos: debutante",
+            16: "iDADE DA REBELDIA",
+            17: "Idade da rebeldia",
+            18: "Maioridade!",
+            19: "Um pra vinte",
+            20: "Duas dezenhas",
+            21: "Jogo do bicho",
+            22: "Dois patinhos na lagoa (clássico)",
+            23: "aniversario do chaves",
+            24: "numero do VEADO",
+            25: "Um quarto de século",
+            26: "Dois e meia duzia",
+            27: "Número cabalístico",
+            28: "Fevereiro em anos bissextos",
+            29: "Final dos vinte",
+            30: "Trintão",
+            31: "Fim do mês",
+            32: "Trinta e dois dentes na boca",
+            33: "Idade de Cristo",
+            34: "Trinta e quatro voltas olímpicas",
+            35: "Meia da meia idade",
+            36: "Tres duzias",
+            37: "Trinta e sete graus de febre",
+            38: "Calibre de arma",
+            39: "Quase quarenta",
+            40: "Entrando no enta",
+            41: "Quarenta e um tiros (chamado famoso)",
+            42: "A resposta para o universo e tudo mais",
+            43: "Quarenta e três sambas-enredo",
+            44: "Dois patinhos gemeos",
+            45: "Metade de 90",
+            46: "Quarenta e seis cromossomos",
+            47: "Quarenta e sete ronca motor",
+            48: "Quarenta e oito horas",
+            49: "Quarenta e nove degraus",
+            50: "Meio século!",
+            51: "51: a pinga!",
+            52: "Cartas no baralho",
+            53: "Cinquenta e três semanas",
+            54: "Número do carnaval",
+            55: "Cinquenta e cinco é dois cinco",
+            56: "Cinquenta e seis passos de dança",
+            57: "Cinquenta e sete variedades Heinz",
+            58: "Cinquenta e oito sustos",
+            59: "Cinquenta e nove minutos",
+            60: "Sessentão",
+            61: "A idade experiente",
+            62: "Sessenta e dois passos",
+            63: "Sessenta e três alegrias",
+            64: "Nintendo 64!",
+            65: "Sessenta e cinco anos: aposentadoria",
+            66: "O número da besta ao contrário?",
+            67: "Sessenta e sete: rock nacional",
+            68: "Sessenta e oito: já quase lá",
+            69: "A aquela posicao",
+            70: "Setentão",
+            71: "Setenta e um: malandro demais",
+            72: "Sete duzias",
+            73: "Setenta e três trovões",
+            74: "Setenta e quatro horas",
+            75: "Três quartos de século",
+            76: "Setenta e seis trombones",
+            77: "Sete e sete, número da sorte",
+            78: "Setenta e oito rotações (disco)",
+            79: "Setenta e nove dias de férias",
+            80: "Oitenta: a decada do DISCO",
+            81: "Quadrado perfeito (9x9)",
+            82: "Oitenta e dois segundos",
+            83: "Oitenta e três voltas",
+            84: "Oitenta e quatro: livro clássico (Orwell)",
+            85: "Oitenta e cinco km/h (De Volta pro Futuro)",
+            86: "Oitenta e seis opções",
+            87: "Oitenta e sete vitórias",
+            88: "Duas barrigas de cerveja",
+            89: "Oitenta e nove é quase noventa",
+            90: "Noventão",
+            91: "Noventa e um motivos pra sorrir",
+            92: "Noventa e dois passos",
+            93: "Noventa e três universos",
+            94: "Noventa e quatro problemas",
+            95: "Noventa e cinco soluções",
+            96: "Noventa e seis ideias",
+            97: "3 pro cem",
+            98: "2 pro cem",
+            99: "1 pro cem"
+        };
+
+        const sorteados = [];
+
+        function sortear() {
+            let numero;
+            do {
+                numero = Math.floor(Math.random() * 99) + 1;
+            } while (sorteados.includes(numero));
+
+            sorteados.push(numero);
+
+            const frase = frasesBingo[numero] || `Número ${numero} sorteado!`;
+
+            const historicoOrdenado = [...sorteados].sort((a, b) => a - b);
+
+            const texto = `👉 Sorteado: ${numero} — ${frase}\n\nHistórico de sorteios (em ordem):\n${historicoOrdenado.join(", ")}`;
+
+            const output = document.getElementById('output');
+            if (output) {
+                output.textContent = texto;
+            } else {
+                console.log(texto);
+            }
+
+            return numero;
+        }
+    </script>
+</body>
+
+</html>

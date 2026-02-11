@@ -52,24 +52,15 @@ body {
 /* Controle da grid para 4 por linha no Bootstrap */
 
 /* Para xs (telas muito pequenas) 2 por linha */
-.col-xs-6 {
-    width: 50%;
+.col-xs-3 {
+    width: 25%;
     float: left;
+    box-sizing: border-box;
 }
 
-/* Para sm e md (telas pequenas e médias) 4 por linha */
-@media (min-width: 576px) {
-    .col-sm-3 {
-        width: 25%;
-        float: left;
-    }
-}
-
-/* Para telas grandes mantém 4 por linha */
-@media (min-width: 992px) {
-    .col-lg-3 {
-        width: 25%;
-        float: left;
+@media (max-width: 576px) {
+    .col-xs-3 {
+        width: 50%;
     }
 }
 
@@ -103,7 +94,10 @@ h2 {
   display: flex;
   flex-direction: column;
   align-content: center;
-  width: 40%;
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .avatar {
@@ -116,31 +110,33 @@ h2 {
   margin-top: -20%;
 }
 
-@media screen and (max-device-width: 840px) {
+@media (max-width: 768px) {
     .text-special {
-      font-size: 32px;
+      font-size: 20px;
       font-style: italic;
     }
 
     h4 {
-      font-size: 30px;
+      font-size: 18px;
     }
     h2 {
-      font-size: 35px;
+      font-size: 22px;
     }
     h1 {
-      font-size: 40px;
+      font-size: 28px;
     }
     .avatar {
-      border-width: 8px;
-      width: 250px;
-      height: 250px;
+      border-width: 4px;
+      width: 150px;
+      height: 150px;
     }
     .container-fluid {
-      border-width: 8px;
-      margin-top: 10%;
-      margin-bottom: -5%;
-      width: 70%;
-      font-size: 25px;
+      width: 95%;
+      font-size: 14px;
+      padding: 1rem;
+    }
+    .icon-box {
+      font-size: 2rem;
+      margin-top: 2%;
     }
 }

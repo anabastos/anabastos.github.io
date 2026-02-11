@@ -11,8 +11,8 @@ body {
 }
 
 .icon-box {
-  margin-top: 3%;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 5px;
   text-align: center;
   font-size: 2.5rem;
 }
@@ -27,9 +27,47 @@ body {
   color: #f39c12;
 }
 
+.container-fluid p {
+  margin-bottom: 10px;
+}
+
 /* Linha de ícones */
 .icons-row {
-  margin-top: 20px;
+  margin-top: 10px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Links em grid */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 15px auto 20px auto;
+  border: 2px dotted #d0d0d0;
+  max-width: 600px;
+}
+
+.links-grid a {
+  color: #0d0e47;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 12px;
+  border-right: 2px dotted #d0d0d0;
+  border-bottom: 2px dotted #d0d0d0;
+  text-align: center;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links-grid a:nth-child(3n) {
+  border-right: none;
+}
+
+.links-grid a:nth-last-child(-n + 3) {
+  border-bottom: none;
 }
 
 /* Ícones */
@@ -40,12 +78,12 @@ body {
 
 .icon-box i {
   transition: transform 0.3s, color 0.3s;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 @media (min-width: 768px) {
   .icon-box i {
-    font-size: 2.5em;
+    font-size: 1.4em;
   }
 }
 
@@ -107,7 +145,16 @@ h2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -20%;
+  margin-top: -15%;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: #646363;
+  font-size: 0.85rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed #d0d0d0;
 }
 
 @media (max-width: 768px) {
@@ -138,5 +185,23 @@ h2 {
     .icon-box {
       font-size: 2rem;
       margin-top: 2%;
+    }
+    
+    .links-grid {
+      max-width: 95%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .links-grid a {
+      padding: 16px 8px;
+      font-size: 15px;
+    }
+    
+    .links-grid a:nth-child(2n) {
+      border-right: none;
+    }
+    
+    .links-grid a:nth-child(3n) {
+      border-right: 2px dotted #d0d0d0;
     }
 }

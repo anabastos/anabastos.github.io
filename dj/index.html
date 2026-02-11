@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Anabastos - Eventos & Equipamentos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>🎧 DJ RAMBDA 🎧</h1>
+        <p>unleashing raw rave energy and euphoric chaos</p>
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://wa.me/5511986993010" target="_blank" title="WhatsApp" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/naluportello" target="_blank" title="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://soundcloud.com/djrambda" target="_blank" title="SoundCloud" class="social-icon"><i class="fab fa-soundcloud"></i></a>
+            <a href="https://www.youtube.com/@naluportello" target="_blank" title="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.twitch.tv/naluportello" target="_blank" title="Twitch" class="social-icon"><i class="fab fa-twitch"></i></a>
+        </div>
+    </header>
+
+    <nav>
+        <button class="nav-btn active" data-section="eventos">Feed</button>
+        <button class="nav-btn" data-section="quem-sou">Quem Sou</button>
+        <button class="nav-btn" data-section="equipamentos">Equipamentos</button>
+        <button class="nav-btn" data-section="midia">Mídia</button>
+    </nav>
+
+    <div class="container">
+        <!-- FEED SECTION -->
+        <section id="eventos" class="active">
+            <h2 class="section-title">📅 Feed</h2>
+            <div class="grid" id="eventos-grid"></div>
+        </section>
+
+        <!-- QUEM SOU SECTION -->
+        <section id="quem-sou">
+            <div class="about-section">
+                <h2>Quem Sou</h2>
+                <p>Nalu Portello, mais conhecida como <strong>DJ RAMBDA</strong>, tem raízes no pós-punk e EBM, e uma trajetória marcada por experiências digitais, ruídos e intensidades sonoras. Sua formação atravessa influências que vão do nightcore, hardstyle e hardcore ao drum'n'bass, sempre filtradas por uma sensibilidade que molda sua estética única.</p>
+                <p>Sua formação é marcada por influências que vão do nightcore, hardstyle, hardcore ao drum'n'bass. RAMBDA mistura trance techno, hardcore, breakbeat, neorave com uma abordagem crua, intensa e com uma estética euforica, hiperativa e profundamente marcada por uma sensibilidade digital que molda sua sonoridade. Estreando nas pistas em 2025, já se apresentou em espaços como <strong>Netão,</strong> <strong>Casa Abe e Subsolo</strong> além de colaborar na organização de eventos independentes. Seus sets atendem a rolês góticos, noites de house/techno e encontros de drum'n'bass, já carrega o desejo de tensionar as fronteiras entre o underground e o virtual.</p>
+                <h3>DJ RAMBDA é exploradora sonora que transforma pistas em universos eufóricos, cruzando caos rave e intensidade pura com influências do underground gótico, hardstyle e drum'n'bass com sets hiperativos e explosivos.</h3>
+                <h3>Gêneros Musicais</h3>
+                <ol>
+                    <li>TECHNO: neo-rave, hardtrance, acid, techno industrial</li>
+                    <li>BASS: drum n bass, jungle, breakcore</li>
+                    <li>HARDCORE: uptempo, speedcore, oldschool gabber, hardstyle 2000s</li>
+                    <li>HOUSE: ukgarage, french house, eurodance, donk</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- FEED SECTION -->
+        <section id="eventos">
+            <h2 class="section-title">📅 Feed</h2>
+            <div class="grid" id="eventos-grid"></div>
+        </section>
+
+        <!-- EQUIPAMENTOS SECTION -->
+        <section id="equipamentos">
+            <h2 class="section-title">🎛️ Equipamentos para Aluguel</h2>
+            <div class="grid" id="equipamentos-grid"></div>
+        </section>
+
+        <!-- MÍDIA SECTION -->
+        <section id="midia">
+            <h2 class="section-title">📸 Mídia</h2>
+            <div class="media-grid" id="midia-grid"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 DJ Anabastos. Todos os direitos reservados.</p>
+        <p>Eventos • Equipamentos • Produção Musical</p>
+    </footer>
+
+    <!-- Instagram Embed Script -->
+    <script async src="https://www.instagram.com/embed.js"></script>
+
+    <script>
+        // Dados de Eventos
+        const eventos = [
+            {
+                title: "Grooves Night",
+                date: "11 de Abril, 2025",
+                genero: ["House", "UK Garage"],
+                local: "Casaabe",
+                content: ["flyer"],
+                image: "assets/foto-evento-01.jpg",
+                instagram: "https://www.instagram.com/p/DICHPcMpf2E/?igsh=OTY3bXVnczNxZXd6"
+            },
+            {
+                title: "DnB Night",
+                date: "18 de Abril, 2025",
+                genero: ["House", "UK Garage"],
+                local: "Black Market",
+                content: ["post", "vídeo"],
+                image: "assets/foto-evento-02.jpg",
+                instagram: "https://www.instagram.com/naluportello/p/DJfYPmTPKOO/"
+            },
+            {
+                title: "503 Session",
+                date: "3 de Setembro, 2025",
+                genero: [],
+                local: "",
+                content: ["flyer"],
+                instagram: "https://www.instagram.com/naluportello/p/DOJWXf2DZBd/"
+            },
+            {
+                title: "503 Session",
+                date: "14 de Setembro, 2025",
+                genero: ["Acid Techno", "Neorave"],
+                local: "",
+                content: ["vídeo"],
+                youtube: "https://youtu.be/kHuONE1HT_M?si=k4kRnfuKVooEiOGV"
+            },
+            {
+                title: "Coletânea House Techno",
+                date: "16 de Maio, 2025",
+                genero: [],
+                local: "Bar do Netão",
+                content: ["flyer"],
+                instagram: "https://www.instagram.com/p/DJuMsLoNGE-/?utm_source=ig_web_button_share_sheet"
+            },
+            {
+                title: "Coletânea House Techno",
+                date: "22 de Maio, 2025",
+                genero: ["Hardtrance", "Techno"],
+                local: "Bar do Netão",
+                content: ["flyer"],
+                video: "assets/video-evento-01.mp4"
+            },
+            {
+                title: "503 Session - Esquenta",
+                date: "29 de Setembro, 2025",
+                genero: ["Acid Techno", "Neorave"],
+                local: "",
+                content: ["set recording"],
+                soundcloud: "https://soundcloud.com/djrambda/trance-old-school-acid-technos"
+            },
+            {
+                title: "Set Recording",
+                date: "5 de Novembro, 2025",
+                genero: ["Hardtrance", "Techno"],
+                local: "",
+                content: ["set recording"],
+                soundcloud: "https://soundcloud.com/djrambda/hardbass-trancers-bora-quintou"
+            },
+            {
+                title: "Set Recording",
+                date: "15 de Outubro, 2025",
+                genero: ["Techno"],
+                local: "",
+                content: ["set recording"],
+                soundcloud: "https://soundcloud.com/djrambda/neo-rave-tequineira-hard"
+            },
+            {
+                title: "Set Recording",
+                date: "30 de Outubro, 2025",
+                genero: ["Hardbass", "Hardtrance"],
+                local: "",
+                content: ["set recording"],
+                soundcloud: "https://soundcloud.com/djrambda/euphoric-hard-trance"
+            },
+            {
+                title: "Arraia da Ana",
+                date: "16 de Outubro, 2025",
+                genero: [],
+                local: "",
+                content: ["flyer"],
+                instagram: "https://www.instagram.com/p/DP4aBDJDvNO/?igsh=MXd2MWV2dmp0dGl3cg=="
+            },
+            {
+                title: "Codex",
+                date: "27 de Novembro, 2025",
+                genero: [],
+                local: "Subsolo",
+                content: ["flyer"],
+                instagram: "https://www.instagram.com/reel/DRkkRmdgZIF/?igsh=MXhwY20zbzcydXRuZQ=="
+            },
+            {
+                title: "Codex B2B Gioradke",
+                date: "29 de Novembro, 2025",
+                genero: ["Speedcore", "Uptempo"],
+                local: "",
+                content: ["post", "vídeo"],
+                instagram: "https://www.instagram.com/reel/DRscwnQDj9i/?igsh=ajlnYmxoNXVrYjF5"
+            },
+            {
+                title: "VIRADA HARDLOVER - Túnel do Tempo",
+                date: "20 de Dezembro, 2025",
+                genero: ["Hardstyle", "Gabber Oldschool"],
+                local: "",
+                content: ["flyer", "post"],
+                instagram: "https://www.instagram.com/p/DSfv5lJkr_p/"
+            },
+            {
+                title: "VIRADA HARDLOVER - Dia 2",
+                date: "21 de Dezembro, 2025",
+                genero: ["Uptempo"],
+                local: "Subsolo",
+                content: ["post"],
+                instagram: "https://www.instagram.com/p/DSQkGRIEjFs/"
+            },
+            {
+                title: "VIRADA HARDLOVER - Túnel do Tempo",
+                date: "20 de Dezembro, 2025",
+                genero: ["Hardstyle", "Gabber Oldschool"],
+                local: "",
+                content: ["vídeo"],
+                instagram: "https://www.instagram.com/reel/DSGR_Vyko7D/?igsh=aDY2c2dlamp6cDZp"
+            },
+            {
+                title: "TURBO BEATS - Mario Verde Party",
+                date: "24 de Novembro, 2025",
+                genero: [],
+                local: "",
+                content: [],
+                instagram: "https://www.instagram.com/p/DUO0viGEfMV/"
+            },
+            {
+                title: "CODEX SUB - Divulgação",
+                date: "10 de Janeiro, 2026",
+                genero: ["Hardstyle", "Gabber Oldschool", "Techno"],
+                local: "",
+                content: ["post"],
+                instagram: "https://www.instagram.com/p/DTVYO81jYef/"
+            },
+            {
+                title: "CODEX SUB - Vídeos e Fotos",
+                date: "14 de Janeiro, 2026",
+                genero: ["Hardstyle", "Gabber Oldschool", "Techno"],
+                local: "",
+                content: ["post", "vídeo"],
+                instagram: "https://www.instagram.com/p/DTfnlzzkUL5/?img_index=1"
+            }
+        ];
+
+        // Dados de Equipamentos
+        const equipamentos = [
+            {
+                name: "Controladora FLX6",
+                price: "R$ 150,00 / dia",
+                image: "assets/controladora-flx6.png"
+            },
+            {
+                name: "Monitores de Áudio Edifier",
+                price: "R$ 75,00 / dia",
+                image: "assets/monitor-edifier.webp"
+            },
+            {
+                name: "Caixa de Som Ativa DATREL 300w",
+                price: "R$ 200,00 / dia",
+                image: "assets/caixa-som-datrel.webp"
+            }
+        ];
+
+        // Dados de Mídia
+        const midia = [
+            { type: "image", src: "assets/foto-evento-01.jpg", alt: "Foto do Evento" },
+            { type: "image", src: "assets/foto-evento-03.webp", alt: "Equipamento" },
+            { type: "video", src: "assets/video-evento-01.mp4", alt: "Vídeo" },
+            { type: "image", src: "assets/foto-evento-02.jpg", alt: "Foto do Evento" }
+        ];
+
+        // Renderizar Eventos
+        function renderEventos() {
+            const grid = document.getElementById("eventos-grid");
+            grid.innerHTML = [...eventos].reverse().map(e => {
+                const instagramId = e.instagram ? e.instagram.match(/\/(?:p|reel)\/([^/?]+)/)?.[1] : null;
+                let embedHtml = "";
+                if (instagramId) {
+                    embedHtml = `<div class="event-image"><iframe src="https://www.instagram.com/p/${instagramId}/embed/captioned/?cr=1" width="100%" frameborder="0" style="border:none;"></iframe></div>`;
+                } else if (e.youtube) {
+                    const youtubeId = e.youtube.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([^&?]+)/)?.[1];
+                    embedHtml = `<div class="event-image"><iframe width="100%" height="400" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+                } else if (e.soundcloud) {
+                    embedHtml = `<div class="event-image"><iframe width="100%" height="500" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=${e.soundcloud}&color=%23e94560&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 11px; color: #cccccc;line-break: strict; word-break: break-word; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,sans-serif;"><a href="${e.soundcloud}" title="DJ Rambda" target="_blank" style="color: #cccccc; text-decoration: none;">DJ Rambda</a></div></div>`;
+                } else if (e.video) {
+                    embedHtml = `<div class="event-image"><video width="100%" height="400" style="background: #000;" controls><source src="${e.video}" type="video/mp4">Seu navegador não suporta o elemento de vídeo.</video></div>`;
+                } else if (e.image) {
+                    embedHtml = `<div class="event-image"><img src="${e.image}" alt="${e.title}" onerror="this.parentElement.style.display='none';"></div>`;
+                }
+                return `
+                <div class="card event-card">
+                    ${embedHtml}
+                    <div class="event-header">
+                        <div class="event-title">${e.title}</div>
+                        <div class="event-date">${e.date}</div>
+                    </div>
+                    <div class="event-body">
+                        ${e.instagram ? `<div class="event-meta-item"><a href="${e.instagram}" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">📱 Instagram</a></div>` : ""}
+                        ${e.youtube ? `<div class="event-meta-item"><a href="${e.youtube}" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">📺 YouTube</a></div>` : ""}
+                        ${e.soundcloud ? `<div class="event-meta-item"><a href="${e.soundcloud}" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">🎵 SoundCloud</a></div>` : ""}
+                        ${e.local ? `<div class="event-meta-item"><span class="event-meta-label">Local:</span><span class="event-meta-value">${e.local}</span></div>` : ""}
+                        ${e.genero.length > 0 ? `<div class="event-tags">${e.genero.map(g => `<span class="tag">${g}</span>`).join("")}</div>` : ""}
+                        ${e.content.length > 0 ? `<div class="event-meta-item" style="margin-top: auto;"><span class="event-meta-label">Conteúdo:</span><span class="event-meta-value">${e.content.join(", ")}</span></div>` : ""}
+                    </div>
+                </div>
+                `;
+            }).join("");
+            if (window.instgrm && window.instgrm.Embeds && window.instgrm.Embeds.process) {
+                window.instgrm.Embeds.process();
+            }
+        }
+
+        // Renderizar Equipamentos
+        function renderEquipamentos() {
+            const grid = document.getElementById("equipamentos-grid");
+            grid.innerHTML = equipamentos.map(eq => `
+                <div class="card equipment-card">
+                    <div class="equipment-image">
+                        <img src="${eq.image}" alt="${eq.name}" onerror="this.style.display='none';">
+                    </div>
+                    <div class="equipment-body">
+                        <div class="equipment-name">${eq.name}</div>
+                        <div class="equipment-price">${eq.price}</div>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        // Renderizar Mídia
+        function renderMidia() {
+            const grid = document.getElementById("midia-grid");
+            grid.innerHTML = midia.map((m, index) => {
+                if (m.type === "image") {
+                    return `
+                        <div class="media-item">
+                            <img src="${m.src}" alt="${m.alt}" onerror="this.style.display='none';">
+                        </div>
+                    `;
+                } else if (m.type === "video") {
+                    return `
+                        <div class="media-item">
+                            <video controls style="width:100%; height:250px; object-fit: cover;">
+                                <source src="${m.src}" type="video/mp4">
+                                Seu navegador não suporta vídeo HTML5.
+                            </video>
+                        </div>
+                    `;
+                }
+            }).join("");
+        }
+
+        // Navegação
+        document.querySelectorAll(".nav-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".nav-btn").forEach(b => b.classList.remove("active"));
+                document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+                
+                btn.classList.add("active");
+                const section = document.getElementById(btn.dataset.section);
+                section.classList.add("active");
+            });
+        });
+
+        // Inicializar
+        renderEventos();
+        renderEquipamentos();
+        renderMidia();
+    </script>
+</body>
+</html>

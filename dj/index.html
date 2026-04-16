@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+    <nav>
+        <button class="nav-btn active" data-section="eventos">Feed</button>
+        <button class="nav-btn" data-section="quem-sou">Quem Sou</button>
+        <button class="nav-btn" data-section="equipamentos">Equipamentos</button>
+        <button class="nav-btn" data-section="midia">Mídia</button>
+    </nav>
+
     <header>
-        <h1>🎧 DJ RAMBDA 🎧</h1>
+        <h1 class="logo-title"><img src="assets/logo-transparent.png" alt="DJ RAMBDA"></h1>
         <p>unleashing raw rave energy and euphoric chaos</p>
         <!-- Social Links -->
         <div class="social-links">
@@ -21,17 +28,9 @@
         </div>
     </header>
 
-    <nav>
-        <button class="nav-btn active" data-section="eventos">Feed</button>
-        <button class="nav-btn" data-section="quem-sou">Quem Sou</button>
-        <button class="nav-btn" data-section="equipamentos">Equipamentos</button>
-        <button class="nav-btn" data-section="midia">Mídia</button>
-    </nav>
-
     <div class="container">
         <!-- FEED SECTION -->
         <section id="eventos" class="active">
-            <h2 class="section-title">📅 Feed</h2>
             <div class="grid" id="eventos-grid"></div>
         </section>
 
@@ -50,12 +49,6 @@
                     <li>HOUSE: ukgarage, french house, eurodance, donk</li>
                 </ol>
             </div>
-        </section>
-
-        <!-- FEED SECTION -->
-        <section id="eventos">
-            <h2 class="section-title">📅 Feed</h2>
-            <div class="grid" id="eventos-grid"></div>
         </section>
 
         <!-- EQUIPAMENTOS SECTION -->
@@ -130,7 +123,7 @@
                 genero: ["Hardtrance", "Techno"],
                 local: "Bar do Netão",
                 content: ["flyer"],
-                video: "assets/video-evento-01.mp4"
+                image: "assets/foto-evento-01.jpg"
             },
             {
                 title: "503 Session - Esquenta",
@@ -235,6 +228,54 @@
                 local: "",
                 content: ["post", "vídeo"],
                 instagram: "https://www.instagram.com/p/DTfnlzzkUL5/?img_index=1"
+            },
+            {
+                title: "GBDrinks UKG",
+                date: "28 de Janeiro, 2026",
+                genero: ["UK Garage"],
+                local: "GBDrinks",
+                content: ["flyer"],
+                instagram: "https://www.instagram.com/p/DUEiaEDCW1U/?next="
+            },
+            {
+                title: "Turbo Beats GBDrinks",
+                date: "1 de Fevereiro, 2026",
+                genero: ["UK Garage"],
+                local: "GBDrinks",
+                content: ["flyer"],
+                instagram: "https://www.instagram.com/p/DUO0viGEfMV/?utm_source=ig_embed&ig_rid=f3288195-9494-4169-bc30-38c19e720404"
+            },
+            {
+                title: "Garagens Inglesas (UKG) - Set",
+                date: "5 de Fevereiro, 2026",
+                genero: ["UK Garage"],
+                local: "",
+                content: ["set recording"],
+                soundcloud: "https://soundcloud.com/djrambda/garagens-inglesas-ukgarage"
+            },
+            {
+                title: "Fotos Profissionais",
+                date: "19 de Fevereiro, 2026",
+                genero: [],
+                local: "",
+                content: ["fotos profissionais"],
+                instagram: "https://www.instagram.com/p/DU9Y6Z7DonN/?next=&img_index=1"
+            },
+            {
+                title: "Fotos Profissionais",
+                date: "19 de Fevereiro, 2026",
+                genero: [],
+                local: "",
+                content: ["fotos profissionais"],
+                instagram: "https://www.instagram.com/p/DU9ZW9sjnKE/?next=&img_index=1"
+            },
+            {
+                title: "Post Especial",
+                date: "21 de Março, 2026",
+                genero: [],
+                local: "",
+                content: ["imagem"],
+                instagram: "https://www.instagram.com/p/DWKJPbRFmOO/?next=&img_index=1"
             }
         ];
 
@@ -258,12 +299,44 @@
         ];
 
         // Dados de Mídia
-        const midia = [
-            { type: "image", src: "assets/foto-evento-01.jpg", alt: "Foto do Evento" },
-            { type: "image", src: "assets/foto-evento-03.webp", alt: "Equipamento" },
-            { type: "video", src: "assets/video-evento-01.mp4", alt: "Vídeo" },
-            { type: "image", src: "assets/foto-evento-02.jpg", alt: "Foto do Evento" }
+        const fotosMidia = [
+            "Fotos/Foto 1.jpg",
+            "Fotos/Foto 2.jpg",
+            "Fotos/Foto 3.jpg",
+            "Fotos/Mario-Verde-Party-16.jpg",
+            "Fotos/Mario-Verde-Party-17.jpg",
+            "Fotos/Mario-Verde-Party-21.jpg",
+            "Fotos/Mario-Verde-Party-23.jpg",
+            "Fotos/Mario-Verde-Party-56.jpg",
+            "Fotos/Mario-Verde-Party-57.jpg",
+            "Fotos/Mario-Verde-Party-59.jpg",
+            "Fotos/Mario-Verde-Party-60.jpg",
+            "Fotos/Mario-Verde-Party-66.jpg",
+            "Fotos/Mario-Verde-Party-67.jpg",
+            "Fotos/Mario-Verde-Party-69.jpg",
+            "Fotos/Mario-Verde-Party-70.jpg",
+            "Fotos/Mario-Verde-Party-71.jpg",
+            "Fotos/Mario-Verde-Party-72.jpg",
+            "Fotos/Mario-Verde-Party-75.jpg",
+            "Fotos/Mario-Verde-Party-76.jpg",
+            "Fotos/Mario-Verde-Party-78.jpg",
+            "Fotos/Mario-Verde-Party-81.jpg",
+            "Fotos/Mario-Verde-Party-82.jpg",
+            "Fotos/Mario-Verde-Party-83.jpg",
+            "Fotos/Mario-Verde-Party-84.jpg",
+            "Fotos/Mario-Verde-Party-87.jpg",
+            "Fotos/photo_2026-01-12_01-44-32.jpg",
+            "Fotos/photo_2026-01-12_01-44-33 (2).jpg",
+            "Fotos/photo_2026-01-12_01-44-332.jpg",
+            "Fotos/photo_2026-01-12_01-44-333.jpg"
         ];
+
+        const midia = fotosMidia.map((src) => ({
+            type: "image",
+            src: `assets/${src}`,
+            alt: "Foto profissional"
+        }));
+        let midiaCarregada = false;
 
         // Renderizar Eventos
         function renderEventos() {
@@ -277,7 +350,7 @@
                     const youtubeId = e.youtube.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([^&?]+)/)?.[1];
                     embedHtml = `<div class="event-image"><iframe width="100%" height="400" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
                 } else if (e.soundcloud) {
-                    embedHtml = `<div class="event-image"><iframe width="100%" height="500" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=${e.soundcloud}&color=%23e94560&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 11px; color: #cccccc;line-break: strict; word-break: break-word; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,sans-serif;"><a href="${e.soundcloud}" title="DJ Rambda" target="_blank" style="color: #cccccc; text-decoration: none;">DJ Rambda</a></div></div>`;
+                    embedHtml = `<div class="event-image"><iframe width="100%" height="500" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=${e.soundcloud}&color=%23d3d3d3&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 11px; color: #cccccc;line-break: strict; word-break: break-word; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,sans-serif;"><a href="${e.soundcloud}" title="DJ Rambda" target="_blank" style="color: #cccccc; text-decoration: none;">DJ Rambda</a></div></div>`;
                 } else if (e.video) {
                     embedHtml = `<div class="event-image"><video width="100%" height="400" style="background: #000;" controls><source src="${e.video}" type="video/mp4">Seu navegador não suporta o elemento de vídeo.</video></div>`;
                 } else if (e.image) {
@@ -291,12 +364,12 @@
                         <div class="event-date">${e.date}</div>
                     </div>
                     <div class="event-body">
-                        ${e.instagram ? `<div class="event-meta-item"><a href="${e.instagram}" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">📱 Instagram</a></div>` : ""}
-                        ${e.youtube ? `<div class="event-meta-item"><a href="${e.youtube}" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">📺 YouTube</a></div>` : ""}
-                        ${e.soundcloud ? `<div class="event-meta-item"><a href="${e.soundcloud}" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">🎵 SoundCloud</a></div>` : ""}
+                        ${e.instagram ? `<div class="event-meta-item"><a href="${e.instagram}" target="_blank" class="social-tag">📱 Instagram</a></div>` : ""}
+                        ${e.youtube ? `<div class="event-meta-item"><a href="${e.youtube}" target="_blank" class="social-tag">📺 YouTube</a></div>` : ""}
+                        ${e.soundcloud ? `<div class="event-meta-item"><a href="${e.soundcloud}" target="_blank" class="social-tag">🎵 SoundCloud</a></div>` : ""}
                         ${e.local ? `<div class="event-meta-item"><span class="event-meta-label">Local:</span><span class="event-meta-value">${e.local}</span></div>` : ""}
+                        ${e.content.length > 0 ? `<div class="event-content-row"><span class="event-meta-label">Conteúdo:</span><span class="event-meta-value">${e.content.join(", ")}</span></div>` : ""}
                         ${e.genero.length > 0 ? `<div class="event-tags">${e.genero.map(g => `<span class="tag">${g}</span>`).join("")}</div>` : ""}
-                        ${e.content.length > 0 ? `<div class="event-meta-item" style="margin-top: auto;"><span class="event-meta-label">Conteúdo:</span><span class="event-meta-value">${e.content.join(", ")}</span></div>` : ""}
                     </div>
                 </div>
                 `;
@@ -325,24 +398,58 @@
         // Renderizar Mídia
         function renderMidia() {
             const grid = document.getElementById("midia-grid");
-            grid.innerHTML = midia.map((m, index) => {
-                if (m.type === "image") {
-                    return `
-                        <div class="media-item">
-                            <img src="${m.src}" alt="${m.alt}" onerror="this.style.display='none';">
-                        </div>
-                    `;
-                } else if (m.type === "video") {
-                    return `
-                        <div class="media-item">
-                            <video controls style="width:100%; height:250px; object-fit: cover;">
-                                <source src="${m.src}" type="video/mp4">
-                                Seu navegador não suporta vídeo HTML5.
-                            </video>
-                        </div>
-                    `;
-                }
-            }).join("");
+            grid.innerHTML = `
+                <div class="media-loading" id="media-loading">
+                    <span class="media-loading-dot"></span>
+                    Carregando mídia...
+                </div>
+            `;
+
+            requestAnimationFrame(() => {
+                grid.innerHTML = midia.map((m) => {
+                    if (m.type === "image") {
+                        return `
+                            <div class="media-item is-loading">
+                                <div class="media-item-loader"></div>
+                                <img class="media-asset" src="${m.src}" alt="${m.alt}" loading="lazy" decoding="async">
+                            </div>
+                        `;
+                    } else if (m.type === "video") {
+                        return `
+                            <div class="media-item is-loading">
+                                <div class="media-item-loader"></div>
+                                <video class="media-asset" controls preload="metadata" style="width:100%; height:250px; object-fit: cover;">
+                                    <source src="${m.src}" type="video/mp4">
+                                    Seu navegador não suporta vídeo HTML5.
+                                </video>
+                            </div>
+                        `;
+                    }
+                    return "";
+                }).join("");
+
+                grid.querySelectorAll(".media-asset").forEach((asset) => {
+                    const card = asset.closest(".media-item");
+                    const liberarCard = () => card?.classList.remove("is-loading");
+
+                    if (asset.tagName === "IMG") {
+                        if (asset.complete) {
+                            liberarCard();
+                        } else {
+                            asset.addEventListener("load", liberarCard, { once: true });
+                            asset.addEventListener("error", () => {
+                                liberarCard();
+                                asset.style.display = "none";
+                            }, { once: true });
+                        }
+                    } else {
+                        asset.addEventListener("loadeddata", liberarCard, { once: true });
+                        asset.addEventListener("error", liberarCard, { once: true });
+                    }
+                });
+            });
+
+            midiaCarregada = true;
         }
 
         // Navegação
@@ -354,13 +461,16 @@
                 btn.classList.add("active");
                 const section = document.getElementById(btn.dataset.section);
                 section.classList.add("active");
+
+                if (btn.dataset.section === "midia" && !midiaCarregada) {
+                    renderMidia();
+                }
             });
         });
 
         // Inicializar
         renderEventos();
         renderEquipamentos();
-        renderMidia();
     </script>
 </body>
 </html>

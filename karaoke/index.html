@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karaoke Hub</title>
+  <meta name="description" content="Hub do karaoke com player e envio de pedidos">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main class="layout">
+    <header class="hero">
+      <p class="eyebrow">GitHub Pages + Firebase</p>
+      <h1>Karaoke</h1>
+      <p class="subtitle">Escolha como entrar: host/player ou envio de musica.</p>
+    </header>
+
+    <section class="panel panel-hub">
+      <h2>Acessos rapidos</h2>
+      <p>Use a mesma sala nas duas paginas via query string, por exemplo: <strong>?room=festa</strong></p>
+      <div class="hub-actions">
+        <a class="cta-link" href="./player.html?room=default">Abrir Player (Host)</a>
+        <a class="cta-link" href="./request.html?room=default">Abrir Envio de Musica</a>
+      </div>
+    </section>
+
+    <section class="panel panel-help">
+      <h2>Fluxo recomendado</h2>
+      <p>
+        1) Convidados entram em request.html para pedir musica.<br>
+        2) Host entra em player.html, faz login e controla a fila.<br>
+        3) O video avanca para o proximo item automaticamente.
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>

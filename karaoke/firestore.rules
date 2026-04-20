@@ -1,0 +1,66 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isHost(roomId) {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/rooms/$(roomId)/hosts/$(request.auth.uid));
+    }
+
+    function hasOnlyQueueFields(data) {
+      return data.keys().hasOnly([
+        'requestedBy',
+        'url',
+        'videoId',
+        'status',
+        'createdAt',
+        'playedAt'
+      ]);
+    }
+
+    function isValidQueueCreate() {
+      return hasOnlyQueueFields(request.resource.data)
+        && request.resource.data.requestedBy is string
+        && request.resource.data.requestedBy.size() > 0
+        && request.resource.data.requestedBy.size() <= 40
+        && request.resource.data.url is string
+        && request.resource.data.url.size() > 0
+        && request.resource.data.url.size() <= 500
+        && request.resource.data.videoId is string
+        && request.resource.data.videoId.size() > 0
+        && request.resource.data.videoId.size() <= 20
+        && request.resource.data.status == 'queued'
+        && request.resource.data.createdAt is timestamp
+        && request.resource.data.playedAt == null;
+    }
+
+    function isValidQueueHostUpdate() {
+      return hasOnlyQueueFields(request.resource.data)
+        && request.resource.data.requestedBy == resource.data.requestedBy
+        && request.resource.data.url == resource.data.url
+        && request.resource.data.videoId == resource.data.videoId
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.status in ['queued', 'playing', 'played']
+        && (request.resource.data.playedAt == null || request.resource.data.playedAt is timestamp);
+    }
+
+    match /rooms/{roomId} {
+      allow read: if true;
+      allow create, update, delete: if isHost(roomId);
+
+      match /hosts/{uid} {
+        allow read: if isHost(roomId);
+        allow create, update, delete: if isHost(roomId);
+      }
+
+      match /queue/{songId} {
+        allow read: if true;
+        allow create: if isSignedIn() && isValidQueueCreate();
+        allow update, delete: if isHost(roomId) && isValidQueueHostUpdate();
+      }
+    }
+  }
+}

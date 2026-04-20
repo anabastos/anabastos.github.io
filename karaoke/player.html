@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karaoke Player</title>
+  <meta name="description" content="Player do karaoke com controle de fila">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main class="layout">
+    <header class="hero">
+      <p class="eyebrow">Karaoke Host</p>
+      <h1>Player da fila</h1>
+      <p class="subtitle">Reproduz os videos do YouTube e avanca para o proximo item da fila.</p>
+      <div class="hero-links">
+        <a class="inline-link" href="./index.html">Hub</a>
+        <a class="inline-link" href="./request.html">Enviar musica</a>
+      </div>
+    </header>
+
+    <section class="panel panel-auth">
+      <div class="panel-title-row">
+        <h2>Autenticacao</h2>
+        <div id="roomLabel" class="room-badge">Sala: default</div>
+      </div>
+      <form id="hostLoginForm" class="request-form">
+        <label>
+          Email do host
+          <input id="hostEmail" type="email" placeholder="host@dominio.com" autocomplete="username">
+        </label>
+        <label>
+          Senha
+          <input id="hostPassword" type="password" placeholder="Sua senha" autocomplete="current-password">
+        </label>
+        <div class="controls">
+          <button type="submit">Entrar como host</button>
+          <button id="guestBtn" type="button" class="secondary-btn">Entrar como convidado</button>
+          <button id="logoutBtn" type="button" class="secondary-btn">Sair</button>
+        </div>
+      </form>
+      <p id="authStatus" class="muted">Carregando autenticacao...</p>
+      <p id="hostStatus" class="muted">Permissao host: verificando...</p>
+    </section>
+
+    <section class="panel panel-now-playing">
+      <div class="panel-title-row">
+        <h2>Tocando agora</h2>
+      </div>
+      <div id="player" class="player"></div>
+      <div class="controls">
+        <button id="nextBtn" type="button" disabled>Proximo</button>
+        <label class="switch-wrap">
+          <input id="autoAdvance" type="checkbox" checked>
+          Avanco automatico
+        </label>
+      </div>
+      <p id="nowPlayingText" class="muted">Nada tocando no momento.</p>
+    </section>
+
+    <section class="panel panel-queue">
+      <h2>Fila (nomes e pedidos)</h2>
+      <ol id="queueList" class="queue-list"></ol>
+    </section>
+  </main>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script type="module" src="./player.js"></script>
+</body>
+
+</html>

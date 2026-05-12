@@ -42,7 +42,7 @@ body {
 /* Links em grid */
 .links-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin: 15px auto 20px auto;
   border: 2px dotted #d0d0d0;
   max-width: 600px;
@@ -51,22 +51,27 @@ body {
 .links-grid a {
   color: #0d0e47;
   text-decoration: none;
-  transition: color 0.3s ease;
-  padding: 12px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  padding: 18px 12px;
   border-right: 2px dotted #d0d0d0;
   border-bottom: 2px dotted #d0d0d0;
   text-align: center;
-  min-height: 44px;
+  min-height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.links-grid a:nth-child(3n) {
+.links-grid a:hover {
+  background-color: #0d0e47;
+  color: #f39c12;
+}
+
+.links-grid a:nth-child(2n) {
   border-right: none;
 }
 
-.links-grid a:nth-last-child(-n + 3) {
+.links-grid a:nth-last-child(-n + 2) {
   border-bottom: none;
 }
 
@@ -197,11 +202,4 @@ footer {
       font-size: 15px;
     }
     
-    .links-grid a:nth-child(2n) {
-      border-right: none;
-    }
-    
-    .links-grid a:nth-child(3n) {
-      border-right: 2px dotted #d0d0d0;
-    }
 }

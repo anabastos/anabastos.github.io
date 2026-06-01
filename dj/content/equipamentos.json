@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Controladora FLX6",
+    "price": "R$ 150,00 / dia",
+    "image": "assets/controladora-flx6.png"
+  },
+  {
+    "name": "Monitores de Áudio Edifier",
+    "price": "R$ 75,00 / dia",
+    "image": "assets/monitor-edifier.webp"
+  },
+  {
+    "name": "Caixa de Som Ativa DATREL 300w",
+    "price": "R$ 200,00 / dia",
+    "image": "assets/caixa-som-datrel.webp"
+  }
+]

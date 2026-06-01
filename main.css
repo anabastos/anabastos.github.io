@@ -24,7 +24,7 @@ body {
 }
 
 .icon-box a:hover {
-  color: #f39c12;
+  color: #ffd9f2;
 }
 
 .container-fluid p {
@@ -56,15 +56,14 @@ body {
   border-right: 2px dotted #d0d0d0;
   border-bottom: 2px dotted #d0d0d0;
   text-align: center;
-  min-height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .links-grid a:hover {
-  background-color: #0d0e47;
-  color: #f39c12;
+  background-color: #2f3138;
+  color: #ffd9f2;
 }
 
 .links-grid a:nth-child(2n) {
@@ -77,7 +76,7 @@ body {
 
 /* Ícones */
 .icon-box i:hover {
-  color: #1d1b19;
+  color: #ffd9f2;
   transform: scale(1.2);
 }
 
@@ -133,7 +132,7 @@ h2 {
   padding: 1.5%;
   border-radius: 5px;
   margin-top: 6%;
-  margin-bottom: -6%;
+  margin-bottom: 6%;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -150,16 +149,16 @@ h2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -15%;
+  margin-top: -8%;
 }
 
-footer {
+.site-footer {
   margin-top: 3rem;
   text-align: center;
-  color: #646363;
+  color: #d0d0d0;
   font-size: 0.85rem;
-  padding-top: 1.5rem;
-  border-top: 1px dashed #d0d0d0;
+  padding-top: 0;
+  border-top: none;
 }
 
 @media (max-width: 768px) {
@@ -181,6 +180,7 @@ footer {
       border-width: 4px;
       width: 150px;
       height: 150px;
+      margin-top: -10%;
     }
     .container-fluid {
       width: 95%;

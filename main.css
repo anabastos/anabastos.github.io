@@ -163,43 +163,49 @@ h2 {
 
 @media (max-width: 768px) {
     .text-special {
-      font-size: 20px;
+      font-size: 16px;
       font-style: italic;
     }
 
     h4 {
-      font-size: 18px;
+      font-size: 15px;
     }
     h2 {
-      font-size: 22px;
+      font-size: 17px;
     }
     h1 {
-      font-size: 28px;
+      font-size: 22px;
     }
     .avatar {
       border-width: 4px;
-      width: 150px;
-      height: 150px;
-      margin-top: -10%;
+      width: 120px;
+      height: 120px;
+      margin-top: -12%;
     }
     .container-fluid {
-      width: 95%;
-      font-size: 14px;
-      padding: 1rem;
+      width: 65%;
+      font-size: 11px;
+      padding: 0.75rem;
+      margin-top: 6%;
+      margin-bottom: 6%;
     }
     .icon-box {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-top: 2%;
     }
-    
+
+    .icon-box i {
+      font-size: 1.3em;
+    }
+
     .links-grid {
-      max-width: 95%;
+      max-width: 100%;
       grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .links-grid a {
-      padding: 16px 8px;
-      font-size: 15px;
+      padding: 10px 5px;
+      font-size: 10px;
     }
-    
+
 }

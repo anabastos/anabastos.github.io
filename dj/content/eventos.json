@@ -3,7 +3,7 @@
     "title": "Grooves Night",
     "date": "11 de Abril, 2025",
     "genero": ["House", "UK Garage"],
-    "local": "Casaabe",
+    "local": "Casa abe",
     "content": ["flyer"],
     "image": "assets/foto-evento-01.jpg",
     "instagram": "https://www.instagram.com/p/DICHPcMpf2E/?igsh=OTY3bXVnczNxZXd6"
@@ -248,5 +248,37 @@
     "local": "Bar Provisorio",
     "content": ["post"],
     "instagram": "https://www.instagram.com/p/DY5yl-BlnH9/"
+  },
+  {
+    "title": "Arraia da Ana - Flyer do evento",
+    "date": "13 de Junho, 2026",
+    "genero": ["Techno", "Drum n Bass"],
+    "local": "",
+    "content": ["post"],
+    "instagram": "https://www.instagram.com/p/DZGJEdktF8_/"
+  },
+  {
+    "title": "Arraia da Ana - DJs convidados",
+    "date": "13 de Junho, 2026",
+    "genero": ["Techno", "Drum n Bass"],
+    "local": "",
+    "content": ["post"],
+    "instagram": "https://www.instagram.com/p/DZITAOdNxTb/"
+  },
+  {
+    "title": "KXNTRALEI - Pocket Underclub",
+    "date": "8 de Junho, 2026",
+    "genero": ["Hardcore", "Gabber"],
+    "local": "R Boraceia 176 - Barra Funda",
+    "content": ["post"],
+    "instagram": "https://www.instagram.com/p/DadgkOICCJ-/"
+  },
+  {
+    "title": "Sirikutico - Edicao 2",
+    "date": "18 de Julho, 2026",
+    "genero": ["Hardcore", "HardBass"],
+    "local": "R Boraceia 176 - Barra Funda",
+    "content": ["post"],
+    "instagram": "https://www.instagram.com/p/DawD0sZo5nB/"
   }
 ]

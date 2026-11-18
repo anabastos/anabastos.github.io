@@ -34,76 +34,33 @@ async function carregarEquipamentos() {
     }
 }
 
-// Dados de Mídia
-let fotosMidia = [];
-let midia = [];
+// Dados de Mídia — vêm do mídia kit no NAS, servido pelo QG
+// (o manifesto é público; os arquivos originais ficam em /opt/data/mediakit)
+const MEDIAKIT_URL = "https://app.portellolabs.co/qg/mediakit/manifest.json";
+let midiaKit = [];
+let midiaFiltro = "all";
+let midiaCarregada = false;
 
-// O mídia kit vive no QG (NAS) e publica um manifesto público.
-// Se ele não responder, o site cai nas fotos antigas de content/fotos-midia.json.
-const MEDIAKIT_MANIFEST = "https://app.portellolabs.co/qg/mediakit/manifest.json";
-
-async function carregarFotosMidia() {
+async function carregarMidia() {
     try {
-        const response = await fetch(MEDIAKIT_MANIFEST, { cache: "no-store" });
+        const response = await fetch(MEDIAKIT_URL, { cache: "no-cache" });
 
         if (!response.ok) {
-            throw new Error(`Manifesto do mídia kit: ${response.status}`);
+            throw new Error(`Falha ao carregar o mídia kit: ${response.status}`);
         }
 
-        const manifesto = await response.json();
-        const itens = [];
-
-        (manifesto.categories || []).forEach((cat) => {
-            if (cat.key !== "fotos" && cat.key !== "videos") return;
+        const data = await response.json();
+        midiaKit = [];
+        (data.categories || []).forEach((cat) => {
             (cat.items || []).forEach((item) => {
-                if (item.kind === "video") {
-                    itens.push({
-                        type: "video",
-                        src: item.url,
-                        poster: item.thumb || "",
-                        alt: item.title || "Vídeo de festa"
-                    });
-                } else if (item.kind === "image") {
-                    itens.push({
-                        type: "image",
-                        src: item.thumb || item.url,
-                        full: item.url,
-                        alt: item.title || "Foto profissional"
-                    });
-                }
+                midiaKit.push({ ...item, category: cat.key, categoryLabel: cat.label });
             });
         });
-
-        if (!itens.length) {
-            throw new Error("Manifesto sem fotos/vídeos");
-        }
-
-        midia = itens;
-        fotosMidia = itens.map((i) => i.src);
     } catch (error) {
-        console.warn("Mídia kit indisponível, usando fotos locais:", error);
-        try {
-            const response = await fetch("content/fotos-midia.json");
-
-            if (!response.ok) {
-                throw new Error(`Falha ao carregar fotos de mídia: ${response.status}`);
-            }
-
-            fotosMidia = await response.json();
-            midia = fotosMidia.map((src) => ({
-                type: "image",
-                src: `assets/${src}`,
-                alt: "Foto profissional"
-            }));
-        } catch (err) {
-            console.error("Erro ao carregar fotos de mídia:", err);
-            fotosMidia = [];
-            midia = [];
-        }
+        console.error("Erro ao carregar o mídia kit:", error);
+        midiaKit = [];
     }
 }
-
-let midiaCarregada = false;
 
 // Renderizar Eventos
 function renderEventos() {
@@ -163,66 +120,164 @@ function renderEquipamentos() {
 }
 
 // Renderizar Mídia
+const MIDIA_ORDEM = ["logo", "fotos", "videos", "bio"];
+const MIDIA_ROTULO = { logo: "Logos", fotos: "Fotos", videos: "Vídeos de festas", bio: "Bio & presskit" };
+
+function escMidia(txt) {
+    return String(txt == null ? "" : txt)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+}
+
+function midiaCategorias() {
+    const mapa = new Map();
+    midiaKit.forEach((m) => {
+        const atual = mapa.get(m.category) || { key: m.category, label: m.categoryLabel || MIDIA_ROTULO[m.category] || m.category, n: 0 };
+        atual.n += 1;
+        mapa.set(m.category, atual);
+    });
+    return Array.from(mapa.values()).sort(
+        (a, b) => (MIDIA_ORDEM.indexOf(a.key) + 1 || 99) - (MIDIA_ORDEM.indexOf(b.key) + 1 || 99));
+}
+
+function midiaFiltroHtml() {
+    const cats = midiaCategorias();
+    const btn = (key, label, ativo) =>
+        `<button class="media-filter${ativo ? " on" : ""}" data-cat="${key}">${escMidia(label)}</button>`;
+    return [btn("all", `Todos (${midiaKit.length})`, midiaFiltro === "all")]
+        .concat(cats.map((c) => btn(c.key, `${c.label} (${c.n})`, midiaFiltro === c.key)))
+        .join("");
+}
+
+function midiaCardHtml(m) {
+    const titulo = escMidia(m.title || m.id);
+    const legenda = m.caption ? `<span class="media-caption">${escMidia(m.caption)}</span>` : "";
+    const credito = m.credit ? `<span class="media-credit">${escMidia(m.credit)}</span>` : "";
+    const baixar = `<a class="media-download" href="${m.url}" download target="_blank" rel="noopener">baixar original</a>`;
+
+    if (m.kind === "video") {
+        const capa = m.thumb
+            ? `<img class="media-asset" src="${m.thumb}" alt="${titulo}" loading="lazy" decoding="async">`
+            : `<span class="media-placeholder">▶</span>`;
+        const dur = m.duration_s ? `<span class="media-duration">${Math.round(m.duration_s)}s</span>` : "";
+        return `<figure class="media-item media-video${m.thumb ? " is-loading" : ""}" data-video="${m.url}" data-title="${titulo}">
+            <a class="media-play" href="${m.url}" target="_blank" rel="noopener" title="assistir ${titulo}">
+                ${capa}<span class="media-play-icon">▶</span>${dur}
+            </a>
+            <figcaption><b>${titulo}</b>${legenda}${credito}${baixar}</figcaption>
+        </figure>`;
+    }
+    if (m.kind === "doc") {
+        return `<figure class="media-item media-doc">
+            <a href="${m.url}" target="_blank" rel="noopener"><span class="media-doc-icon">📄</span></a>
+            <figcaption><b>${titulo}</b>${legenda}${baixar}</figcaption>
+        </figure>`;
+    }
+    const mini = m.thumb || m.url;
+    return `<figure class="media-item is-loading">
+        <a href="${m.url}" target="_blank" rel="noopener" title="${titulo} — abrir original">
+            <img class="media-asset" src="${mini}" alt="${titulo}" loading="lazy" decoding="async">
+        </a>
+        <figcaption><b>${titulo}</b>${legenda}${credito}${baixar}</figcaption>
+    </figure>`;
+}
+
+function renderMidiaFiltro() {
+    const grid = document.getElementById("midia-grid");
+    const box = document.getElementById("midia-filtros");
+    if (box) box.innerHTML = midiaFiltroHtml();
+
+    const visiveis = midiaKit.filter((m) => midiaFiltro === "all" || m.category === midiaFiltro);
+    if (!visiveis.length) {
+        grid.innerHTML = `<div class="media-vazio">Nada aqui ainda.</div>`;
+        return;
+    }
+    grid.innerHTML = visiveis.map(midiaCardHtml).join("");
+
+    grid.querySelectorAll(".media-asset").forEach((asset) => {
+        const card = asset.closest(".media-item");
+        const liberar = () => card && card.classList.remove("is-loading");
+        if (asset.tagName === "IMG") {
+            if (asset.complete && asset.naturalWidth) liberar();
+            else {
+                asset.addEventListener("load", liberar, { once: true });
+                asset.addEventListener("error", () => {
+                    liberar();
+                    const fig = asset.closest(".media-item");
+                    if (fig) fig.style.display = "none";
+                }, { once: true });
+            }
+        } else {
+            asset.addEventListener("loadeddata", liberar, { once: true });
+            asset.addEventListener("error", liberar, { once: true });
+        }
+    });
+
+    // clicar no play abre o player sem carregar vídeo nenhum antes disso
+    grid.querySelectorAll(".media-play").forEach((link) => {
+        link.addEventListener("click", (ev) => {
+            if (ev.metaKey || ev.ctrlKey) return;   // abrir em nova aba = comportamento normal
+            ev.preventDefault();
+            abrirPlayerMidia(link.closest(".media-video"));
+        });
+    });
+
+    if (box) {
+        box.querySelectorAll(".media-filter").forEach((b) => {
+            b.addEventListener("click", () => {
+                midiaFiltro = b.dataset.cat;
+                renderMidiaFiltro();
+            });
+        });
+    }
+}
+
+function abrirPlayerMidia(card) {
+    if (!card) return;
+    const url = card.dataset.video;
+    const titulo = card.dataset.title || "";
+    fecharPlayerMidia();
+    const box = document.createElement("div");
+    box.className = "media-modal";
+    box.id = "media-modal";
+    box.innerHTML = `
+        <div class="media-modal-backdrop" data-close></div>
+        <div class="media-modal-body" role="dialog" aria-modal="true" aria-label="${titulo}">
+            <button class="media-modal-close" data-close aria-label="fechar">×</button>
+            <video controls autoplay playsinline preload="metadata">
+                <source src="${url}" type="video/mp4">
+            </video>
+            <div class="media-modal-foot">
+                <b>${titulo}</b>
+                <a href="${url}" target="_blank" rel="noopener">baixar original ↗</a>
+            </div>
+        </div>`;
+    document.body.appendChild(box);
+    document.body.style.overflow = "hidden";
+    box.querySelectorAll("[data-close]").forEach((n) => n.addEventListener("click", fecharPlayerMidia));
+    document.addEventListener("keydown", fecharPlayerMidiaTecla);
+}
+
+function fecharPlayerMidia() {
+    const box = document.getElementById("media-modal");
+    if (box) box.remove();
+    document.body.style.overflow = "";
+    document.removeEventListener("keydown", fecharPlayerMidiaTecla);
+}
+
+function fecharPlayerMidiaTecla(ev) {
+    if (ev.key === "Escape") fecharPlayerMidia();
+}
+
 function renderMidia() {
     const grid = document.getElementById("midia-grid");
-    grid.innerHTML = `
-        <div class="media-loading" id="media-loading">
-            <span class="media-loading-dot"></span>
-            Carregando mídia...
-        </div>
-    `;
-
-    requestAnimationFrame(() => {
-        grid.innerHTML = midia.map((m) => {
-            if (m.type === "image") {
-                return `
-                    <div class="media-item is-loading">
-                        <div class="media-item-loader"></div>
-                        <img class="media-asset" src="${m.src}" alt="${m.alt}" data-full="${m.full || m.src}" loading="lazy" decoding="async">
-                    </div>
-                `;
-            } else if (m.type === "video") {
-                return `
-                    <div class="media-item is-loading">
-                        <div class="media-item-loader"></div>
-                        <video class="media-asset" controls preload="metadata"${m.poster ? ` poster="${m.poster}"` : ""} style="width:100%; height:250px; object-fit: cover;">
-                            <source src="${m.src}" type="video/mp4">
-                            Seu navegador não suporta vídeo HTML5.
-                        </video>
-                    </div>
-                `;
-            }
-            return "";
-        }).join("");
-
-        grid.querySelectorAll(".media-asset").forEach((asset) => {
-            const card = asset.closest(".media-item");
-            const liberarCard = () => card?.classList.remove("is-loading");
-
-            if (asset.tagName === "IMG") {
-                if (asset.complete) {
-                    liberarCard();
-                } else {
-                    asset.addEventListener("load", liberarCard, { once: true });
-                    asset.addEventListener("error", () => {
-                        liberarCard();
-                        asset.style.display = "none";
-                    }, { once: true });
-                }
-            } else {
-                asset.addEventListener("loadeddata", liberarCard, { once: true });
-                asset.addEventListener("error", liberarCard, { once: true });
-            }
-        });
-    });
-
-    grid.querySelectorAll("img.media-asset").forEach((img) => {
-        img.style.cursor = "zoom-in";
-        img.addEventListener("click", () => {
-            window.open(img.dataset.full || img.src, "_blank", "noopener");
-        });
-    });
-
+    if (!midiaKit.length) {
+        grid.innerHTML = `<div class="media-vazio">O mídia kit não carregou agora. Tenta de novo em instantes
+            ou abre <a href="https://app.portellolabs.co/qg" target="_blank" rel="noopener">o QG</a>.</div>`;
+        return;
+    }
+    grid.innerHTML = `<div class="media-loading"><span class="media-loading-dot"></span>Carregando mídia...</div>`;
+    requestAnimationFrame(() => renderMidiaFiltro());
     midiaCarregada = true;
 }
 
@@ -239,16 +294,26 @@ document.querySelectorAll(".nav-btn").forEach(btn => {
         if (btn.dataset.section === "midia" && !midiaCarregada) {
             renderMidia();
         }
+        history.replaceState(null, "", "#" + btn.dataset.section);
     });
 });
+
+// abrir direto numa seção via link (ex.: anabastos.me/dj/#midia)
+function abrirSecaoDoHash() {
+    const alvo = (location.hash || "").replace("#", "");
+    if (!alvo) return;
+    const btn = document.querySelector(`.nav-btn[data-section="${alvo}"]`);
+    if (btn) btn.click();
+}
 
 // Inicializar
 async function inicializar() {
     await carregarEventos();
     await carregarEquipamentos();
-    await carregarFotosMidia();
+    await carregarMidia();
     renderEventos();
     renderEquipamentos();
+    abrirSecaoDoHash();
 }
 
 inicializar();

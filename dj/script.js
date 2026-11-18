@@ -38,24 +38,68 @@ async function carregarEquipamentos() {
 let fotosMidia = [];
 let midia = [];
 
+// O mídia kit vive no QG (NAS) e publica um manifesto público.
+// Se ele não responder, o site cai nas fotos antigas de content/fotos-midia.json.
+const MEDIAKIT_MANIFEST = "https://app.portellolabs.co/qg/mediakit/manifest.json";
+
 async function carregarFotosMidia() {
     try {
-        const response = await fetch("content/fotos-midia.json");
+        const response = await fetch(MEDIAKIT_MANIFEST, { cache: "no-store" });
 
         if (!response.ok) {
-            throw new Error(`Falha ao carregar fotos de mídia: ${response.status}`);
+            throw new Error(`Manifesto do mídia kit: ${response.status}`);
         }
 
-        fotosMidia = await response.json();
-        midia = fotosMidia.map((src) => ({
-            type: "image",
-            src: `assets/${src}`,
-            alt: "Foto profissional"
-        }));
+        const manifesto = await response.json();
+        const itens = [];
+
+        (manifesto.categories || []).forEach((cat) => {
+            if (cat.key !== "fotos" && cat.key !== "videos") return;
+            (cat.items || []).forEach((item) => {
+                if (item.kind === "video") {
+                    itens.push({
+                        type: "video",
+                        src: item.url,
+                        poster: item.thumb || "",
+                        alt: item.title || "Vídeo de festa"
+                    });
+                } else if (item.kind === "image") {
+                    itens.push({
+                        type: "image",
+                        src: item.thumb || item.url,
+                        full: item.url,
+                        alt: item.title || "Foto profissional"
+                    });
+                }
+            });
+        });
+
+        if (!itens.length) {
+            throw new Error("Manifesto sem fotos/vídeos");
+        }
+
+        midia = itens;
+        fotosMidia = itens.map((i) => i.src);
     } catch (error) {
-        console.error("Erro ao carregar fotos de mídia:", error);
-        fotosMidia = [];
-        midia = [];
+        console.warn("Mídia kit indisponível, usando fotos locais:", error);
+        try {
+            const response = await fetch("content/fotos-midia.json");
+
+            if (!response.ok) {
+                throw new Error(`Falha ao carregar fotos de mídia: ${response.status}`);
+            }
+
+            fotosMidia = await response.json();
+            midia = fotosMidia.map((src) => ({
+                type: "image",
+                src: `assets/${src}`,
+                alt: "Foto profissional"
+            }));
+        } catch (err) {
+            console.error("Erro ao carregar fotos de mídia:", err);
+            fotosMidia = [];
+            midia = [];
+        }
     }
 }
 
@@ -134,14 +178,14 @@ function renderMidia() {
                 return `
                     <div class="media-item is-loading">
                         <div class="media-item-loader"></div>
-                        <img class="media-asset" src="${m.src}" alt="${m.alt}" loading="lazy" decoding="async">
+                        <img class="media-asset" src="${m.src}" alt="${m.alt}" data-full="${m.full || m.src}" loading="lazy" decoding="async">
                     </div>
                 `;
             } else if (m.type === "video") {
                 return `
                     <div class="media-item is-loading">
                         <div class="media-item-loader"></div>
-                        <video class="media-asset" controls preload="metadata" style="width:100%; height:250px; object-fit: cover;">
+                        <video class="media-asset" controls preload="metadata"${m.poster ? ` poster="${m.poster}"` : ""} style="width:100%; height:250px; object-fit: cover;">
                             <source src="${m.src}" type="video/mp4">
                             Seu navegador não suporta vídeo HTML5.
                         </video>
@@ -169,6 +213,13 @@ function renderMidia() {
                 asset.addEventListener("loadeddata", liberarCard, { once: true });
                 asset.addEventListener("error", liberarCard, { once: true });
             }
+        });
+    });
+
+    grid.querySelectorAll("img.media-asset").forEach((img) => {
+        img.style.cursor = "zoom-in";
+        img.addEventListener("click", () => {
+            window.open(img.dataset.full || img.src, "_blank", "noopener");
         });
     });
 

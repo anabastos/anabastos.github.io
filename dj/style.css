@@ -693,3 +693,170 @@ footer p {
         object-fit: contain;
     }
 }
+
+
+/* Mídia kit (NAS) */
+.section-sub {
+    max-width: 720px;
+    margin: -0.4rem 0 1.2rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.media-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.media-filter {
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    transition: var(--transition);
+}
+
+.media-filter:hover { border-color: var(--neon-color); color: #fff; }
+
+.media-filter.on {
+    color: #06140a;
+    background: var(--neon-color);
+    border-color: var(--neon-color);
+    box-shadow: 0 0 14px var(--neon-glow-strong);
+}
+
+.media-item figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0.5rem 0.65rem 0.6rem;
+    background: #101216;
+    color: var(--text-light);
+    font-size: 0.78rem;
+    line-height: 1.35;
+    text-align: left;
+}
+
+.media-item figcaption b { color: #fff; font-size: 0.82rem; }
+.media-caption { color: var(--text-light); }
+.media-credit { opacity: 0.6; font-size: 0.72rem; }
+
+.media-download {
+    margin-top: 4px;
+    align-self: flex-start;
+    color: var(--neon-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.media-download:hover { text-decoration: underline; }
+
+.media-item.media-doc .media-doc-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    font-size: 3rem;
+    background: #101216;
+}
+
+.media-vazio {
+    grid-column: 1 / -1;
+    padding: 2rem 0;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Vídeos do mídia kit: capa + player em modal */
+.media-video .media-play { display: block; position: relative; }
+.media-video .media-play img { width: 100%; height: 250px; object-fit: cover; }
+.media-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    font-size: 2rem;
+    color: var(--neon-color);
+    background: #0a0c0f;
+}
+.media-play-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #fff;
+    text-shadow: 0 0 18px rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.18);
+    transition: var(--transition);
+}
+.media-video:hover .media-play-icon { background: rgba(0, 0, 0, 0.05); color: var(--neon-color); }
+.media-duration {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+.media-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.media-modal-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.86); }
+.media-modal-body {
+    position: relative;
+    width: min(860px, 94vw);
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    background: #0b0d10;
+    border: 1px solid rgba(109, 255, 58, 0.25);
+    box-shadow: 0 0 40px rgba(109, 255, 58, 0.15);
+}
+.media-modal-body video { width: 100%; max-height: 72vh; background: #000; }
+.media-modal-close {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    z-index: 2;
+    font: inherit;
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: 4px 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.media-modal-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.6rem 0.8rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+.media-modal-foot b { color: #fff; }
+.media-modal-foot a { color: var(--neon-color); font-weight: 700; text-decoration: none; }

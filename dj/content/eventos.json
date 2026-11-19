@@ -434,6 +434,135 @@
     "instagram": "https://www.instagram.com/p/DawD0sZo5nB/"
   },
   {
+    "title": "KXNTRALEI BAILE",
+    "date": "29 de Agosto, 2026",
+    "genero": [
+      "Funk",
+      "Tuim",
+      "Eletro-funk"
+    ],
+    "local": "Cafofinho",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/kxntralei-29-08/flyer-1.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DcWKUpkOGnF/"
+  },
+  {
+    "title": "Terminal Goth Club",
+    "date": "19 de Setembro, 2026",
+    "genero": [
+      "EBM",
+      "Pós-punk",
+      "Synthwave"
+    ],
+    "local": "Cafofinho",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/terminal-goth-19-09/flyer-1.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DdHMWA4RCxC/"
+  },
+  {
+    "title": "Mario Verde Party",
+    "date": "20 de Setembro, 2026",
+    "genero": [
+      "UK Garage"
+    ],
+    "local": "GBDrinks",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/mario-verde-20-09/flyer-1.jpg",
+      "assets/eventos/mario-verde-20-09/flyer-2.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DdacrWfRfxa/"
+  },
+  {
+    "title": "UKG no GBDrinks",
+    "date": "20 de Setembro, 2026",
+    "genero": [
+      "UK Garage"
+    ],
+    "local": "GBDrinks",
+    "content": [
+      "reel"
+    ],
+    "images": [
+      "assets/eventos/reel-ukg-gbdrinks/cover.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/Ddhexp9Af3D/"
+  },
+  {
+    "title": "LetsBass Festival",
+    "date": "17 de Outubro, 2026",
+    "genero": [
+      "Drum n Bass",
+      "Dubstep"
+    ],
+    "local": "Tarot Club",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/letsbass-17-10/flyer-1.jpg",
+      "assets/eventos/letsbass-17-10/flyer-2.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DejxuSMx-_r/"
+  },
+  {
+    "title": "Terminal Goth Club — Halloween",
+    "date": "7 de Novembro, 2026",
+    "genero": [
+      "EBM",
+      "Pós-punk"
+    ],
+    "local": "Arena Show SP",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/terminal-goth-halloween-07-11/flyer-1.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DeKLXvjR4Db/"
+  },
+  {
+    "title": "Domina",
+    "date": "13 de Novembro, 2026",
+    "genero": [
+      "Techno",
+      "Acid"
+    ],
+    "local": "KAZADOZOTRO",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/domina-13-11/flyer-1.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/Dfr2uWFkW6Q/"
+  },
+  {
+    "title": "Sirikutico",
+    "date": "21 de Novembro, 2026",
+    "genero": [
+      "Drum n Bass"
+    ],
+    "local": "Cafofinho",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/sirikutico-21-11/flyer-1.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DfZqkzXFtSO/"
+  },
+  {
     "id": "2026-12-04-terminal-3",
     "title": "Terminal Goth Club - Apresenta BARAN VAMPIRE & YUI ROCHA",
     "date": "4 de Dezembro, 2026",

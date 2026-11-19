@@ -68,7 +68,10 @@ function renderEventos() {
     grid.innerHTML = [...eventos].reverse().map(e => {
         const instagramId = e.instagram ? e.instagram.match(/\/(?:p|reel)\/([^/?]+)/)?.[1] : null;
         let embedHtml = "";
-        if (instagramId) {
+        if (Array.isArray(e.images) && e.images.length) {
+            const grid = e.images.length > 1 ? ' style="display:grid;gap:8px;"' : "";
+            embedHtml = `<div class="event-image"${grid}>${e.images.map(src => `<img src="${src}" alt="${e.title}" loading="lazy" onerror="this.style.display='none';">`).join("")}</div>`;
+        } else if (instagramId) {
             embedHtml = `<div class="event-image"><iframe src="https://www.instagram.com/p/${instagramId}/embed/captioned/?cr=1" width="100%" frameborder="0" style="border:none;"></iframe></div>`;
         } else if (e.youtube) {
             const youtubeId = e.youtube.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([^&?]+)/)?.[1];

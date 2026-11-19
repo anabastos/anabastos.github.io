@@ -2,18 +2,29 @@
   {
     "title": "Grooves Night",
     "date": "11 de Abril, 2025",
-    "genero": ["House", "UK Garage"],
+    "genero": [
+      "House",
+      "UK Garage"
+    ],
     "local": "Casa abe",
-    "content": ["flyer"],
+    "content": [
+      "flyer"
+    ],
     "image": "assets/foto-evento-01.jpg",
     "instagram": "https://www.instagram.com/p/DICHPcMpf2E/?igsh=OTY3bXVnczNxZXd6"
   },
   {
     "title": "DnB Night",
     "date": "18 de Abril, 2025",
-    "genero": ["House", "UK Garage"],
+    "genero": [
+      "House",
+      "UK Garage"
+    ],
     "local": "Black Market",
-    "content": ["post", "vídeo"],
+    "content": [
+      "post",
+      "vídeo"
+    ],
     "image": "assets/foto-evento-02.jpg",
     "instagram": "https://www.instagram.com/naluportello/p/DJfYPmTPKOO/"
   },
@@ -22,15 +33,22 @@
     "date": "3 de Setembro, 2025",
     "genero": [],
     "local": "",
-    "content": ["flyer"],
+    "content": [
+      "flyer"
+    ],
     "instagram": "https://www.instagram.com/naluportello/p/DOJWXf2DZBd/"
   },
   {
     "title": "503 Session",
     "date": "14 de Setembro, 2025",
-    "genero": ["Acid Techno", "Neorave"],
+    "genero": [
+      "Acid Techno",
+      "Neorave"
+    ],
     "local": "",
-    "content": ["vídeo"],
+    "content": [
+      "vídeo"
+    ],
     "youtube": "https://youtu.be/kHuONE1HT_M?si=k4kRnfuKVooEiOGV"
   },
   {
@@ -38,47 +56,73 @@
     "date": "16 de Maio, 2025",
     "genero": [],
     "local": "Bar do Netão",
-    "content": ["flyer"],
+    "content": [
+      "flyer"
+    ],
     "instagram": "https://www.instagram.com/p/DJuMsLoNGE-/?utm_source=ig_web_button_share_sheet"
   },
   {
     "title": "Coletânea House Techno",
     "date": "22 de Maio, 2025",
-    "genero": ["Hardtrance", "Techno"],
+    "genero": [
+      "Hardtrance",
+      "Techno"
+    ],
     "local": "Bar do Netão",
-    "content": ["flyer"],
+    "content": [
+      "flyer"
+    ],
     "image": "assets/foto-evento-01.jpg"
   },
   {
     "title": "503 Session - Esquenta",
     "date": "29 de Setembro, 2025",
-    "genero": ["Acid Techno", "Neorave"],
+    "genero": [
+      "Acid Techno",
+      "Neorave"
+    ],
     "local": "",
-    "content": ["set recording"],
+    "content": [
+      "set recording"
+    ],
     "soundcloud": "https://soundcloud.com/djrambda/trance-old-school-acid-technos"
   },
   {
     "title": "Set Recording",
     "date": "5 de Novembro, 2025",
-    "genero": ["Hardtrance", "Techno"],
+    "genero": [
+      "Hardtrance",
+      "Techno"
+    ],
     "local": "",
-    "content": ["set recording"],
+    "content": [
+      "set recording"
+    ],
     "soundcloud": "https://soundcloud.com/djrambda/hardbass-trancers-bora-quintou"
   },
   {
     "title": "Set Recording",
     "date": "15 de Outubro, 2025",
-    "genero": ["Techno"],
+    "genero": [
+      "Techno"
+    ],
     "local": "",
-    "content": ["set recording"],
+    "content": [
+      "set recording"
+    ],
     "soundcloud": "https://soundcloud.com/djrambda/neo-rave-tequineira-hard"
   },
   {
     "title": "Set Recording",
     "date": "30 de Outubro, 2025",
-    "genero": ["Hardbass", "Hardtrance"],
+    "genero": [
+      "Hardbass",
+      "Hardtrance"
+    ],
     "local": "",
-    "content": ["set recording"],
+    "content": [
+      "set recording"
+    ],
     "soundcloud": "https://soundcloud.com/djrambda/euphoric-hard-trance"
   },
   {
@@ -86,7 +130,9 @@
     "date": "16 de Outubro, 2025",
     "genero": [],
     "local": "",
-    "content": ["flyer"],
+    "content": [
+      "flyer"
+    ],
     "instagram": "https://www.instagram.com/p/DP4aBDJDvNO/?igsh=MXd2MWV2dmp0dGl3cg=="
   },
   {
@@ -94,39 +140,62 @@
     "date": "27 de Novembro, 2025",
     "genero": [],
     "local": "Subsolo",
-    "content": ["flyer"],
+    "content": [
+      "flyer"
+    ],
     "instagram": "https://www.instagram.com/reel/DRkkRmdgZIF/?igsh=MXhwY20zbzcydXRuZQ=="
   },
   {
     "title": "Codex B2B Gioradke",
     "date": "29 de Novembro, 2025",
-    "genero": ["Speedcore", "Uptempo"],
+    "genero": [
+      "Speedcore",
+      "Uptempo"
+    ],
     "local": "",
-    "content": ["post", "vídeo"],
+    "content": [
+      "post",
+      "vídeo"
+    ],
     "instagram": "https://www.instagram.com/reel/DRscwnQDj9i/?igsh=ajlnYmxoNXVrYjF5"
   },
   {
     "title": "VIRADA HARDLOVER - Túnel do Tempo",
     "date": "20 de Dezembro, 2025",
-    "genero": ["Hardstyle", "Gabber Oldschool"],
+    "genero": [
+      "Hardstyle",
+      "Gabber Oldschool"
+    ],
     "local": "",
-    "content": ["flyer", "post"],
+    "content": [
+      "flyer",
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DSfv5lJkr_p/"
   },
   {
     "title": "VIRADA HARDLOVER - Dia 2",
     "date": "21 de Dezembro, 2025",
-    "genero": ["Uptempo"],
+    "genero": [
+      "Uptempo"
+    ],
     "local": "Subsolo",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DSQkGRIEjFs/"
   },
   {
     "title": "VIRADA HARDLOVER - Túnel do Tempo",
     "date": "20 de Dezembro, 2025",
-    "genero": ["Hardstyle", "Gabber Oldschool"],
+    "genero": [
+      "Hardstyle",
+      "Gabber Oldschool"
+    ],
     "local": "",
-    "content": ["vídeo"],
+    "content": [
+      "vídeo"
+    ],
     "instagram": "https://www.instagram.com/reel/DSGR_Vyko7D/?igsh=aDY2c2dlamp6cDZp"
   },
   {
@@ -140,41 +209,66 @@
   {
     "title": "CODEX SUB - Divulgação",
     "date": "10 de Janeiro, 2026",
-    "genero": ["Hardstyle", "Gabber Oldschool", "Techno"],
+    "genero": [
+      "Hardstyle",
+      "Gabber Oldschool",
+      "Techno"
+    ],
     "local": "",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DTVYO81jYef/"
   },
   {
     "title": "CODEX SUB - Vídeos e Fotos",
     "date": "14 de Janeiro, 2026",
-    "genero": ["Hardstyle", "Gabber Oldschool", "Techno"],
+    "genero": [
+      "Hardstyle",
+      "Gabber Oldschool",
+      "Techno"
+    ],
     "local": "",
-    "content": ["post", "vídeo"],
+    "content": [
+      "post",
+      "vídeo"
+    ],
     "instagram": "https://www.instagram.com/p/DTfnlzzkUL5/?img_index=1"
   },
   {
     "title": "GBDrinks UKG",
     "date": "28 de Janeiro, 2026",
-    "genero": ["UK Garage"],
+    "genero": [
+      "UK Garage"
+    ],
     "local": "GBDrinks",
-    "content": ["flyer"],
+    "content": [
+      "flyer"
+    ],
     "instagram": "https://www.instagram.com/p/DUEiaEDCW1U/?next="
   },
   {
     "title": "Turbo Beats GBDrinks",
     "date": "1 de Fevereiro, 2026",
-    "genero": ["UK Garage"],
+    "genero": [
+      "UK Garage"
+    ],
     "local": "GBDrinks",
-    "content": ["flyer"],
+    "content": [
+      "flyer"
+    ],
     "instagram": "https://www.instagram.com/p/DUO0viGEfMV/?utm_source=ig_embed&ig_rid=f3288195-9494-4169-bc30-38c19e720404"
   },
   {
     "title": "Garagens Inglesas (UKG) - Set",
     "date": "5 de Fevereiro, 2026",
-    "genero": ["UK Garage"],
+    "genero": [
+      "UK Garage"
+    ],
     "local": "",
-    "content": ["set recording"],
+    "content": [
+      "set recording"
+    ],
     "soundcloud": "https://soundcloud.com/djrambda/garagens-inglesas-ukgarage"
   },
   {
@@ -182,7 +276,9 @@
     "date": "19 de Fevereiro, 2026",
     "genero": [],
     "local": "",
-    "content": ["fotos profissionais"],
+    "content": [
+      "fotos profissionais"
+    ],
     "instagram": "https://www.instagram.com/p/DU9Y6Z7DonN/?next=&img_index=1"
   },
   {
@@ -190,7 +286,9 @@
     "date": "19 de Fevereiro, 2026",
     "genero": [],
     "local": "",
-    "content": ["fotos profissionais"],
+    "content": [
+      "fotos profissionais"
+    ],
     "instagram": "https://www.instagram.com/p/DU9ZW9sjnKE/?next=&img_index=1"
   },
   {
@@ -198,7 +296,9 @@
     "date": "21 de Março, 2026",
     "genero": [],
     "local": "",
-    "content": ["imagem"],
+    "content": [
+      "imagem"
+    ],
     "instagram": "https://www.instagram.com/p/DWKJPbRFmOO/?next=&img_index=1"
   },
   {
@@ -206,79 +306,260 @@
     "date": "26 de Abril, 2026",
     "genero": [],
     "local": "",
-    "content": ["playlist"],
+    "content": [
+      "playlist"
+    ],
     "soundcloud": "https://soundcloud.com/djrambda/sets/spooky-sunset-30-anos-da-ana"
   },
   {
     "title": "CryptoRave - Encerramento",
     "date": "6 de Maio, 2026",
-    "genero": ["Techno", "Gabber", "Hardcore"],
+    "genero": [
+      "Techno",
+      "Gabber",
+      "Hardcore"
+    ],
     "local": "Espaço Nobre",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DYAB5K0FiaF/"
   },
   {
     "title": "CryptoRave - Encerramento",
     "date": "8 de Maio, 2026",
-    "genero": ["Techno", "Gabber", "Hardcore"],
+    "genero": [
+      "Techno",
+      "Gabber",
+      "Hardcore"
+    ],
     "local": "Espaço Nobre",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DYDaDiljwrp/"
   },
   {
     "title": "Hardlovers 9 Anos - Virada Cultural",
     "date": "10 de Maio, 2026",
-    "genero": ["Gabber", "Hardstyle", "Uptempo"],
+    "genero": [
+      "Gabber",
+      "Hardstyle",
+      "Uptempo"
+    ],
     "local": "Bar Provisorio",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DYKgFpkAP-6/"
   },
   {
     "title": "Hardlovers 9 Anos - Virada Cultural",
     "date": "12 de Maio, 2026",
-    "genero": ["Gabber", "Hardstyle", "Uptempo"],
+    "genero": [
+      "Gabber",
+      "Hardstyle",
+      "Uptempo"
+    ],
     "local": "Bar Provisorio",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DYPkEqxA48i/"
   },
   {
     "title": "Hardlovers 9 Anos - Virada Cultural Registro",
     "date": "28 de Maio, 2026",
-    "genero": ["Gabber", "Hardstyle", "Uptempo"],
+    "genero": [
+      "Gabber",
+      "Hardstyle",
+      "Uptempo"
+    ],
     "local": "Bar Provisorio",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DY5yl-BlnH9/"
   },
   {
     "title": "Arraia da Ana - Flyer do evento",
     "date": "13 de Junho, 2026",
-    "genero": ["Techno", "Drum n Bass"],
+    "genero": [
+      "Techno",
+      "Drum n Bass"
+    ],
     "local": "",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DZGJEdktF8_/"
   },
   {
     "title": "Arraia da Ana - DJs convidados",
     "date": "13 de Junho, 2026",
-    "genero": ["Techno", "Drum n Bass"],
+    "genero": [
+      "Techno",
+      "Drum n Bass"
+    ],
     "local": "",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DZITAOdNxTb/"
   },
   {
     "title": "KXNTRALEI - Pocket Underclub",
     "date": "8 de Junho, 2026",
-    "genero": ["Hardcore", "Gabber"],
+    "genero": [
+      "Hardcore",
+      "Gabber"
+    ],
     "local": "R Boraceia 176 - Barra Funda",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DadgkOICCJ-/"
   },
   {
     "title": "Sirikutico - Edicao 2",
     "date": "18 de Julho, 2026",
-    "genero": ["Hardcore", "HardBass"],
+    "genero": [
+      "Hardcore",
+      "HardBass"
+    ],
     "local": "R Boraceia 176 - Barra Funda",
-    "content": ["post"],
+    "content": [
+      "post"
+    ],
     "instagram": "https://www.instagram.com/p/DawD0sZo5nB/"
+  },
+  {
+    "title": "KXNTRALEI BAILE",
+    "date": "29 de Agosto, 2026",
+    "genero": [
+      "Funk",
+      "Tuim",
+      "Eletro-funk"
+    ],
+    "local": "Cafofinho",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/kxntralei-29-08/flyer-1.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DcWKUpkOGnF/"
+  },
+  {
+    "title": "Terminal Goth Club",
+    "date": "19 de Setembro, 2026",
+    "genero": [
+      "EBM",
+      "Pós-punk",
+      "Synthwave"
+    ],
+    "local": "Cafofinho",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/terminal-goth-19-09/flyer-1.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DdHMWA4RCxC/"
+  },
+  {
+    "title": "Mario Verde Party",
+    "date": "20 de Setembro, 2026",
+    "genero": [
+      "UK Garage"
+    ],
+    "local": "GBDrinks",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/mario-verde-20-09/flyer-1.jpg",
+      "assets/eventos/mario-verde-20-09/flyer-2.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DdacrWfRfxa/"
+  },
+  {
+    "title": "UKG no GBDrinks",
+    "date": "20 de Setembro, 2026",
+    "genero": [
+      "UK Garage"
+    ],
+    "local": "GBDrinks",
+    "content": [
+      "reel"
+    ],
+    "images": [
+      "assets/eventos/reel-ukg-gbdrinks/cover.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/Ddhexp9Af3D/"
+  },
+  {
+    "title": "LetsBass Festival",
+    "date": "17 de Outubro, 2026",
+    "genero": [
+      "Drum n Bass",
+      "Dubstep"
+    ],
+    "local": "Tarot Club",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/letsbass-17-10/flyer-1.jpg",
+      "assets/eventos/letsbass-17-10/flyer-2.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DejxuSMx-_r/"
+  },
+  {
+    "title": "Terminal Goth Club — Halloween",
+    "date": "7 de Novembro, 2026",
+    "genero": [
+      "EBM",
+      "Pós-punk"
+    ],
+    "local": "Arena Show SP",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/terminal-goth-halloween-07-11/flyer-1.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DeKLXvjR4Db/"
+  },
+  {
+    "title": "Domina",
+    "date": "13 de Novembro, 2026",
+    "genero": [
+      "Techno",
+      "Acid"
+    ],
+    "local": "KAZADOZOTRO",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/domina-13-11/flyer-1.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/Dfr2uWFkW6Q/"
+  },
+  {
+    "title": "Sirikutico",
+    "date": "21 de Novembro, 2026",
+    "genero": [
+      "Drum n Bass"
+    ],
+    "local": "Cafofinho",
+    "content": [
+      "flyer"
+    ],
+    "images": [
+      "assets/eventos/sirikutico-21-11/flyer-1.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DfZqkzXFtSO/"
   }
 ]
